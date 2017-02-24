@@ -1,0 +1,51 @@
+<% include partials/header %>
+<div class="signInTile">
+  <div class="signedOutModule">
+    <!-- <img class="mt7" src="/_favicons/android-icon-96x96.png" height="24px" width="24px"> -->
+    <h1 class="Display1 mb5 mt7">Please, sign in.</h1>
+    <form action="javascript:signinDb();">
+      <div class="FormItem">
+        <label class="Caption">Email</label>
+        <input id="username" class="InputText" type="email">
+      </div>
+      <div class="FormItem">
+        <label class="Caption">Password</label>
+        <input id="password" class="InputText" type="password">
+      </div>
+      <input type="submit" class="submitButton mt2" value="Sign in">
+    </form>
+  </div>
+</div>
+<script>
+var auth0 = new Auth0({
+  domain:      '<%= env.AUTH0_DOMAIN %>',
+  clientID:    '<%= env.AUTH0_CLIENT_ID %>',
+  callbackURL: '<%= env.AUTH0_CALLBACK_URL %>',
+});
+function signinDb() {
+  // auth0.signin({
+  //   connection: 'Username-Password-Authentication',
+  //   username: document.getElementById('username').value,
+  //   password: document.getElementById('password').value,
+  // });
+  auth0.signin({
+    connection: 'Username-Password-Authentication',
+    username: document.getElementById('username').value,
+    password: document.getElementById('password').value,
+  }, function (error) {
+    if (error) {
+      displaySnackbar("Please check your email & password.", "error");
+    }
+  });
+};
+</script>
+
+<!-- <div class="officialTile">
+  <p>Who represents you?</p>
+  <input type="text" placeholder="Your zip code" value="98144">
+  <br><br>
+  <button class="SubmitButton">Tell me!</button>
+  </div>
+<div class="officialList"></div> -->
+
+<% include partials/footer %>

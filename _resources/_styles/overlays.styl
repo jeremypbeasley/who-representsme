@@ -1,0 +1,37 @@
+.Overlay {
+  height: 100vh;
+  width: 100vw;
+  background: white;
+  position: fixed;
+  overflow: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  transition: all 200ms ease-out;
+  opacity: 0;
+  transform: scale(1.03);
+}
+.Overlay.Active {
+  opacity: 1;
+  transform: scale(1);
+}
+.OverlayClose {
+  position: fixed;
+  top: 8px;
+  right: 8px;
+  height: 32px;
+  width: 32px;
+  background: url(_img/close.svg) no-repeat;
+  background-size: 24px;
+  background-position: center center;
+  border-radius: 10000px;
+  border: none;
+  outline: none;
+  text-indent: -999999px;
+  opacity: .5;
+}
+.OverlayContent {
+  margin-top: 55px;
+}

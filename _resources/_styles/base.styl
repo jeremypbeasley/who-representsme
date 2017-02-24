@@ -1,0 +1,179 @@
+html
+    min-height 100%
+
+*
+  -webkit-tap-highlight-color rgba(0, 0, 0, 0)
+  -webkit-font-smoothing antialiased
+  font-smoothing antialiased
+  box-sizing border-box
+
+body {
+  height 100%
+  overflow-y auto
+  overflow-x hidden
+  margin 0
+  padding-bottom 10vw;
+}
+
+.hidden {
+  display none
+  opacity 0
+}
+img {
+ max-width: 100%;
+}
+.signInTile {
+  width: 100%;
+  padding: 65px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start ;
+}
+.officialList {
+  display: flex;
+  flex-wrap: wrap;
+}
+.row {
+  width: 100%;
+  padding: 16px;
+}
+.row.flex {
+  display: flex;
+}
+.row.alignCenter {
+  align-items: center;
+}
+.row.Scroll {
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.officialTile {
+  width: 100%;
+  padding: 19px 16px;
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start ;
+  clear: both;
+}
+.officialTile p {
+  align-self: vertical-align
+}
+.officialSingle {
+  margin-right: 2rem;
+  cursor: pointer;
+  width: 130px;
+}
+.officialPhoto {
+  width: 130px;
+  height: 0px;
+  padding-bottom: 130px;
+  border-radius: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-color: #4facfe;
+  margin-bottom: 2rem;
+  float: left;
+}
+.officialPhoto.Large {
+  width: 223px;
+  padding-bottom: 223px;
+  margin-left: -15%;
+  float: left;
+}
+.officialTitleCard {
+  width: 40%;
+  float: left;
+  margin-left: 2rem;
+}
+.officialBio {
+  opacity: 1;
+}
+input:focus {
+  border-color: black;
+  outline: none;
+}
+input.InputText {
+  width: 100%;
+  display: block;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0;
+  padding: 15px 0 5px 0;
+  font-family: typeface-primary;
+  background: transparent;
+  transition: all 200ms ease-out;
+  font-size: 1.4rem;
+  outline: none;
+  height: 45px;
+  z-index: 10;
+  position: relative;
+}
+.FormItem {
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  margin-bottom: 15px;
+  width: 100%;
+}
+.FormItem label.Caption {
+  position: absolute;
+  top: 25px;
+  left: 0px;
+  color:  black;
+  transition: .1s all linear;
+  cursor: text;
+  text-transform: uppercase;
+  z-index: 10;
+}
+label.error {
+  position: relative;
+  color: #ED5654;
+  top: 10px;
+  line-height: 120%;
+  margin-bottom: 15px;
+  display: block;
+}
+.FormItem.active input {
+  padding-left: 0px;
+}
+.FormItem.active label.Caption {
+  top: 0px;
+  font-size: 11px;
+  opacity: .5;
+}
+.Snackbar {
+  width: 100%;
+  max-width: 400px;
+  height: 60px;
+  position: fixed;
+  background-image: linear-gradient(101deg, #ff6100, #ff000d 47%, #500072);
+  background-color: black;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  transform: translateY(60px);
+  transition: all 200ms ease-out;
+}
+.Snackbar span {
+  padding: 21px 16px;
+  display: block;
+  color: white;
+  font-size: 1.4rem;
+}
+.Snackbar.Active {
+  transform: translateY(0px);
+  box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.2);
+}
+.Snackbar.TypeNotif {
+  background-image: linear-gradient(101deg, #ff6100, #ff000d 47%, #500072);
+  background-color: black;
+}
+.Snackbar.TypeConf {
+  background-image: none;
+  background-color: color-greenbright;
+}
+.Snackbar.TypeError {
+  background-image: none;
+  background-color: color-red;
+}
