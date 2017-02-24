@@ -670,3 +670,34 @@ label.error {
 .OverlayContent {
   margin-top: 55px;
 }
+.LeftHalf {
+  background: #ccc;
+  height: 100vw;
+  width: 50%;
+  float: left;
+}
+.RightHalf {
+  background: #f00;
+  height: 100vw;
+  width: 50%;
+  position: relative;
+  float: right;
+}
+.LandingPageContainer {
+  position: relative;
+  top: 10rem;
+  left: 22%;
+  height: 90%;
+  width: 60%;
+}
+.TinyLogo {
+  background-image: url("/_img/logo.svg");
+  background-size: 100%;
+  height: 18px;
+  width: 26px;
+  position: relative;
+  top: 2rem;
+}
+.WhiteText {
+  color: #fff;
+}
