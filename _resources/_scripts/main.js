@@ -2,11 +2,31 @@
 
 var userPostalCode;
 
+$('#zipForm').submit(function(e) {
+    e.preventDefault();
+    // validate the field has 5 characters AND those are all digits
+    if ( $("input:first").val().length !== 5 ) {
+      displaySnackbar("Sorry, we need a 5 digit zip code.", "error");
+    } else {
+      var zip =
+      getOfficials(
+        $("input:first").val(),
+        [
+          "legislatorUpperBody",
+          "legislatorLowerBody",
+          "headOfGovernment",
+          "headOfGovernmentCity"
+        ]
+      );
+    }
+});
+
 // OFFICIALS, all
 
 function getOfficials(zip, roles) {
-  $("#officialList").css("width", "10000px");
+  // $("#officialList").css("width", "10000px");
   $.get("/api/officials/" + zip, function(result) {
+    console.log(result);
     var officialsSorted = {officials : []};
     _.forEach(roles, function(value, key) {
       var role = value;
@@ -169,4 +189,4 @@ function getUserProfile(user_id) {
     );
   })
 }
-getUserProfile(user_id);
+// getUserProfile(user_id);
