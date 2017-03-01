@@ -10,6 +10,7 @@ app.use(express.static('public'));
 app.set('view engine', 'ejs');
 var _ = require("lodash");
 var getJSON = require('get-json');
+var $ = require("jquery");
 
 // Initialize / Routing
 
@@ -124,4 +125,10 @@ app.get('/api/officials/:zip', (req, res) => {
     res.send(mergedArray);
     }
   })
+});
+
+// 404
+
+app.use(function (req, res) {
+    res.render('404.ejs');
 });
