@@ -671,14 +671,16 @@ label.error {
   margin-top: 55px;
 }
 .LeftHalf {
-  background: #ccc;
-  height: 100vw;
+  background: url("/_img/people_flag.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 100vh;
   width: 50%;
   float: left;
 }
 .RightHalf {
   background: #ff3700;
-  height: 100vw;
+  height: 100vh;
   width: 50%;
   position: relative;
   float: right;
