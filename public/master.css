@@ -670,20 +670,31 @@ label.error {
 .OverlayContent {
   margin-top: 55px;
 }
-.LeftHalf {
+.FlagImgContainer {
   background: url("/_img/people_flag.png");
   background-repeat: no-repeat;
   background-size: 100%;
-  height: 100vh;
-  width: 50%;
-  float: left;
+  height: 10vh;
+  width: 100%;
 }
-.RightHalf {
+@media (min-width: 62em) {
+  .FlagImgContainer {
+    height: 100vh;
+    width: 50%;
+    float: left;
+  }
+}
+.RedContainer {
   background: #ff3700;
-  height: 100vh;
-  width: 50%;
-  position: relative;
-  float: right;
+  height: auto;
+}
+@media (min-width: 62em) {
+  .RedContainer {
+    height: 100vh;
+    width: 50%;
+    position: relative;
+    float: right;
+  }
 }
 .LandingPageContainer {
   position: relative;
