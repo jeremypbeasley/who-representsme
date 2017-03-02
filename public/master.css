@@ -453,7 +453,6 @@ body {
   overflow-y: auto;
   overflow-x: hidden;
   margin: 0;
-  padding-bottom: 10vw;
 }
 .hidden {
   display: none;
