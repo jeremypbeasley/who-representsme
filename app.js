@@ -114,7 +114,11 @@ app.get('/api/officials/:zip', (req, res) => {
             newObj['emails'] = officials[indice]['emails'];
             newObj['urls'] = officials[indice]['urls'];
             newObj['channels'] = officials[indice]['channels'];
-            newObj['photos'] = officials[indice]['photoUrl'];
+            if (!officials[indice]['photoUrl']) {
+              newObj['photos'] = "/_img/noimage.gif"
+            } else {
+              newObj['photos'] = officials[indice]['photoUrl'];
+            }
             mergedArray['officials'].push(newObj);
         })
     })
