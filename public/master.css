@@ -671,46 +671,48 @@ label.error {
   margin-top: 55px;
 }
 .FlagImgContainer {
-  background: url("/_img/people_flag.png");
+  background: url("/_img/people_only.png");
   background-repeat: no-repeat;
   background-size: 100%;
-  height: 10vh;
+  height: 35vh;
   width: 100%;
 }
 @media (min-width: 62em) {
   .FlagImgContainer {
+    background: url("/_img/people_only.png");
     height: 100vh;
     width: 50%;
     float: left;
   }
 }
-.RedContainer {
+.RedBackground {
   background: #ff3700;
-  height: auto;
+  height: 100vh;
 }
 @media (min-width: 62em) {
-  .RedContainer {
+  .RedBackground {
     height: 100vh;
     width: 50%;
     position: relative;
     float: right;
   }
 }
-.LandingPageContainer {
-  position: relative;
-  top: 10rem;
-  left: 22%;
-  height: 90%;
-  width: 60%;
-}
 .TinyLogo {
   background-image: url("/_img/logo.svg");
+  background-repeat: no-repeat;
   background-size: 100%;
   height: 18px;
   width: 26px;
+}
+.TinyLogoLandingPage {
   position: relative;
-  top: 2rem;
+  top: 4rem;
+  left: 4rem;
 }
 .WhiteText {
   color: #fff;
+}
+.BuiltBy {
+  position: relative;
+  bottom: 5%;
 }

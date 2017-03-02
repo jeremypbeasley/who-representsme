@@ -1,37 +1,27 @@
 <% include partials/header %>
 
-<div class="FlagImgContainer">
-  <img src="">
-</div>
-<div class="RedContainer">
-  <div class="LandingPageContainer">
-    <div class="TinyLogo"></div>
-    <h1 class="Display1 WhiteText mt8">
-      Do you know who represents you?
-    </h1>
-    <form>
-      <div>
-        <label>
-        Enter your email
-        </label>
-      </div>
-      <div>
-        <input type="number" pattern="[0-9]*" maxlength="3">
-      </div>
-      <div>
-        <input type="submit" value="Go">
-      <div>
-    </form>
-    <p class="LandingPageQuote">
-      &ldquo;When the people become involved&hellip; government becomes more accountable, and our society is stronger.&rdquo;
-    </p>
-    <p>
-      -Arnold Schwarzenegger
-    </p>
-    <p>
-      Built by @jeremypbeasley and @jennminerva
-    </p>
-  </div>
+<div class="FlagImgContainer"></div>
+<div class="RedBackground">
+  <div class="TinyLogo TinyLogoLandingPage"></div>
+  <h1 class="Display1 WhiteText mt4">
+    Do you know who represents you?
+  </h1>
+  <form class="mt4">
+    <label class="mt4">
+      Enter your email
+    </label>
+    <input class="mt4" type="number" pattern="[0-9]*" maxlength="3">
+    <input class="mt4" type="submit" value="Go">
+  </form>
+  <p class="LandingPageQuote mt4">
+    &ldquo;When the people become involved&hellip; government becomes more accountable, and our society is stronger.&rdquo;
+  </p>
+  <p>
+    -Arnold Schwarzenegger
+  </p>
+  <p class="BuiltBy">
+    Built by @jeremypbeasley and @jennminerva
+  </p>
 </div>
 
 <% include partials/footer %>
