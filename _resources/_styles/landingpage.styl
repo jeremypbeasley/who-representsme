@@ -7,9 +7,11 @@
 }
   @media laptop {
     .FlagImgContainer {
-      background: url("/_img/people_only.png");
+      background: url("/_img/people_flag.png") no-repeat;
+      background-position: center center;
+      background-size:100%;
       height: 100vh;
-      width: 50%;
+      width: 60%;
       float: left;
     }
   }
@@ -20,7 +22,7 @@
   @media laptop {
     .RedBackground {
       height:100vh;
-      width: 50%;
+      width: 40%;
       position: relative;
       float: right;
     }
@@ -29,6 +31,11 @@
   margin: 7rem 4rem 0 4rem;
   font-size: 4rem;
   font-family: serif;
+}
+@media laptop {
+  .Display3 {
+    font-size: 6rem;
+  }
 }
 .TinyLogo{
   background-image: url("/_img/logo.svg");
@@ -42,13 +49,15 @@
   top: 4rem;
   left: 4rem;
 }
-  @media laptop {
-
-  }
 label {
   display: block;
   margin: 4rem 4rem 0 4rem;
   font-size: 1.5rem;
+}
+@media laptop {
+  label {
+    margin: 7rem 4rem 0 4rem;
+  }
 }
 .InputZip {
   margin: 0 2rem 0 4rem;
@@ -73,12 +82,23 @@ label {
 .LandingPageQuote {
   margin: 10rem 4rem 0 4rem;
 }
+  @media laptop {
+    .LandingPageQuote {
+      width: 75%;
+      margin: 8rem 4rem 0 4rem
+    }
+  }
 .LandingPageQuoteSpan {
   font-style: italic;
 }
 .BuiltBy {
   margin: 6rem 14rem 0 4rem;
   width: 50%;
+}
+@media laptop {
+  .BuiltBy {
+    width: 75%;
+  }
 }
 .BlackText {
   color: #000;
@@ -100,4 +120,10 @@ label {
   border: none;
   top: -4rem;
   right: 3rem;
+}
+@media laptop {
+  .BtnGitHub {
+    right: 8rem;
+    top: -2rem;
+  }
 }
