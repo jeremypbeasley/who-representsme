@@ -756,3 +756,17 @@ label {
   border-bottom: 1px solid #000;
   padding: 0 0 2px 0;
 }
+.BtnGitHub {
+  height: 18px;
+  width: 18px;
+  text-align: center;
+  background: url("_img/github_logo.png") no-repeat;
+  background-position: center center;
+  text-indent: -9999px;
+  position: relative;
+  outline: none;
+  float: right;
+  border: none;
+  top: -4rem;
+  right: 3rem;
+}
