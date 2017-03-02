@@ -264,9 +264,7 @@ $('#zipForm').submit(function(e) {
 // OFFICIALS, all
 
 function getOfficials(zip, roles) {
-  // $("#officialList").css("width", "10000px");
   $.get("/api/officials/" + zip, function(result) {
-    console.log(result);
     var officialsSorted = {officials : []};
     _.forEach(roles, function(value, key) {
       var role = value;
@@ -276,6 +274,7 @@ function getOfficials(zip, roles) {
         }
       });
     });
+    $("#officialList").html("");
     for (i = 0; i < officialsSorted.officials.length; i++) {
       printOfficial(officialsSorted.officials[i]);
     }
@@ -285,148 +284,42 @@ function getOfficials(zip, roles) {
 };
 
 function printOfficial(official) {
-  if (official.party) {
-    if (official.party == "Republican" || official.party == "Democrat") {
-      var party = " (" + official.party.charAt(0) + ")";
-    } else {
-      var party = ""
-    }
+  // twitter
+  if (!official.channels) {
+    //err
   } else {
-    var party = "";
-  }
-  person = [
-    '<div class="officialSingle" data-name="' + official.name + '">',
-      '<div class="officialPhoto Small" style="background-image: url(' + official.photos + ')"></div>',
-      '<div class="officialName">',
-      '<p><span class="op50">' + official.office.substring(0,20) + '</span><br>',
-      official.name + party + '</p>',
-      '</div>',
-    '</div>',
-  ].join('\n');
-  $("#officialList").append(person);
-};
-
-// OFFICIALS, overlay
-
-function officialDetailTemplate(official) {
-  console.log(official);
-  // twitter logic
-  if (official.channels) {
-    for (i = 0; i < official.channels.length; i++) {
-      officialTwitter = '';
-      if (official.channels[i].type == "Twitter") {
-        console.log("has twitter")
-        officialTwitter = '<p class="mt1"><a href="http://twitter.com/' + official.channels[i].id + '" target="_blank">@' + official.channels[i].id + '</a></p>';
-        i = 1000;
+    console.log(official.channels.length);
+    console.log(official.channels);
+    for (x = 0; x < official.channels.length; x++) {
+      if (official.channels[x].type == "Twitter") {
+        console.log("has twitter");
+        officialTwitter = '<p class="mt1"><a href="http://twitter.com/' + official.channels[x].id + '" target="_blank">@' + official.channels[x].id + '</a></p>';
       }
     }
   }
-  // email logic
+  //email
   if (!official.emails) {
-    var officialEmail = '<p>None available</p>'
+    var officialEmail = '<p>None available</p>';
   } else {
-    var officialEmail = '<p class=""><a href="mailto:' + official.emails[0] + '">' + official.emails[0] + '</a></p>'
+    var officialEmail = '<p class=""><a href="mailto:' + official.emails[0] + '">' + official.emails[0] + '</a></p>';
   }
-  // party logic
+  // party
   if (official.party == "Republican" || official.party == "Democrat" || official.party == "Green" || official.party == "Independent") {
     var party = " (" + official.party.charAt(0) + ")";
   } else {
     var party = "";
   }
-  return [
-    '<div class="row alignCenter">',
-      '<div class="officialPhoto Large" style="background-image: url(' + official.photos + ')"></div>',
-      '<div class="officialTitleCard">',
-        '<p class="op50">' + official.office + party + '</p>',
-        '<h2 class="Display1">' + official.name + '</h2>',
-        '<p class="mt2"><button class="followButton">Follow</button></p>',
-      '</div>',
-    '</div>',
-    '<div class="officialTile">',
-      '<p class="op50 Caption mb3">Online</p>',
+  person = [
+    '<div>',
+      '<div class="officialPhoto" style="background-image: url(' + official.photos + ')"></div>',
+      '<p class="op50">' + official.office + party + '</p>',
+      '<p>' + official.name + '</p>',
       officialTwitter,
-    '</div>',
-    '<div class="officialTile">',
-      '<p class="op50 Caption mb3">Call</p>',
       '<p class=""><a href="tel:',
        official.phones[0].replace(/[^A-Z0-9]/ig, "") + '">' + official.phones,
        '</a></p>',
-    '</div>',
-    '<div class="officialTile">',
-      '<p class="op50 Caption mb3">Email</p>',
       officialEmail,
     '</div>',
-    '<div class="officialTile">',
-      '<p class="op50 Caption mb3">Mail</p>',
-      '<p class="">',
-        official.address[0].line1 + '<Br>',
-        official.address[0].city + ', ' + official.address[0].state +'<Br>',
-        official.address[0].zip + '<Br>',
-      '</p>',
-    '</div>',
   ].join('\n');
+  $("#officialList").append(person);
 };
-
-$(document).on("click",".officialSingle",function(e){
-  var name = $(this).data('name');
-  $.get('/api/officials/' + userPostalCode + '/?name=' + name, function (result) {
-    var OverlayContent = officialDetailTemplate(result);
-    openOverlay(OverlayContent);
-  })
-  .fail(function (error) {
-    console.log("error");
-  });
-});
-
-// ISSUES, list
-
-function getIssues() {
-  $.get("/api/issues", function(result) {
-    printIssues(result);
-  });
-};
-
-function printIssues(issues) {
-  for (i = 0; i < issues.length; i++) {
-    issue = printIssuesTemplate(issues[i]);
-    $("#issuesList").append(issue);
-  }
-};
-
-function printIssuesTemplate(issues) {
-  return [
-    '<div class="officialTile">',
-      '<p class="Caption op50 mt1">' + issues.locale_name + '</p>',
-      '<h2 class="Display2 mb2">' + issues.title + '</h2>',
-      '<p class="op50">Join Jeremy and ' + issues.actions.total_acted.toLocaleString() + ' others.</p>',
-    '</div>',
-  ].join('\n');
-};
-
-function displayZip(userPostalCode, userCity, userState) {
-  $("#displayZip").html(userCity + ', ' + userState + ' - ' + userPostalCode);
-}
-
-function getUserProfile(user_id) {
-  $("#userFirstName").html("");
-  $.get("/api/user/" + user_id, function (result) {
-    firstName = result[0].firstName;
-    $("#userFirstName").html( firstName );
-    $("#headerName").html( firstName.toLowerCase() + "." );
-    // getIssues();
-    userPostalCode = result[0].address.postalcode;
-    userCity = result[0].address.city;
-    userState = result[0].address.state;
-    displayZip(userPostalCode, userCity, userState);
-    getOfficials(
-      userPostalCode,
-      [
-        "legislatorUpperBody",
-        "legislatorLowerBody",
-        "headOfGovernment",
-        "headOfGovernmentCity"
-      ]
-    );
-  })
-}
-// getUserProfile(user_id);
