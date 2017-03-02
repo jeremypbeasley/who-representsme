@@ -468,7 +468,7 @@ img {
   justify-content: flex-start;
   align-content: flex-start;
 }
-.officialList {
+#officialList {
   display: flex;
   flex-wrap: wrap;
 }
