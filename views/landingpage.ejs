@@ -3,25 +3,30 @@
 <div class="FlagImgContainer"></div>
 <div class="RedBackground">
   <div class="TinyLogo TinyLogoLandingPage"></div>
-  <h1 class="Display1 WhiteText mt4">
+  <h1 class="Display1 Display3 WhiteText">
     Do you know who represents you?
   </h1>
-  <form class="mt4">
-    <label class="mt4">
+  <form class=>
+    <label class="WhiteText">
       Enter your email
     </label>
-    <input class="mt4" type="number" pattern="[0-9]*" maxlength="3">
-    <input class="mt4" type="submit" value="Go">
+    <input type="number" pattern="[0-9]*" maxlength="3" class="InputZip">
+    <input type="submit" value="Go" class="SubmitZip">
   </form>
-  <p class="LandingPageQuote mt4">
-    &ldquo;When the people become involved&hellip; government becomes more accountable, and our society is stronger.&rdquo;
-  </p>
-  <p>
-    -Arnold Schwarzenegger
-  </p>
+  <div class="LandingPageQuote WhiteText">
+    <p class="LandingPageQuoteSpan">
+      &ldquo;When the people become involved&hellip; government becomes more accountable, and our society is stronger.&rdquo;
+    </p>
+    <p class="mt4">
+      &ndash;Arnold Schwarzenegger
+    </p>
+  </div>
   <p class="BuiltBy">
-    Built by @jeremypbeasley and @jennminerva
+    Built by <a href="https://twitter.com/jeremypbeasley"><span class="BlackText BorderBottomBlack">@jeremypbeasley</span></a> and <a href="https://twitter.com/jennminerva"><span class="BlackText BorderBottomBlack">@jennminerva</span></a>
   </p>
+  <button class="BtnGitHub">
+    GitHub
+  </button>
 </div>
 
 <% include partials/footer %>
