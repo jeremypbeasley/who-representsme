@@ -669,7 +669,7 @@ label.error {
 .OverlayContent {
   margin-top: 55px;
 }
-.FlagImgContainer {
+.HeroImgContainer {
   background: url("/_img/people_only.png");
   background-repeat: no-repeat;
   background-size: 100%;
@@ -677,7 +677,7 @@ label.error {
   width: 100%;
 }
 @media (min-width: 62em) {
-  .FlagImgContainer {
+  .HeroImgContainer {
     background: url("/_img/people_flag.png") no-repeat;
     background-position: center center;
     background-size: 100%;
@@ -686,7 +686,7 @@ label.error {
     float: left;
   }
 }
-.RedBackgroundContainer {
+.ContentContainer {
   background: #ff3700;
   height: 100vh;
 }
