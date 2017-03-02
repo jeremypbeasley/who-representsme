@@ -238,9 +238,22 @@ $(document).keyup(function(e) {
   }
 });
 
-// GLOBAL VARS
+// Random Zip Code
 
-var userPostalCode;
+function getRandomZip() {
+  $.get("/zips.json", function(result) {
+    if (!result) {
+      //err
+    } else {
+      var zip = result[(Math.random() * (29900 - 1) + 1).toFixed(0)];
+      console.log(zip);
+      $('#zipInput').val(zip);
+    }
+  })
+}
+getRandomZip();
+
+//  OFFICIALS, Form
 
 $('#zipForm').submit(function(e) {
     e.preventDefault();
