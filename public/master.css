@@ -757,7 +757,7 @@ label {
     margin: 8rem 4rem 0 4rem;
   }
 }
-.LandingPageQuoteSpan {
+.Italic {
   font-style: italic;
 }
 .SiteCredit {
@@ -781,7 +781,6 @@ label {
   width: 18px;
   text-align: center;
   background-position: center center;
-  text-indent: -9999px;
   position: relative;
   float: right;
   top: -4rem;
