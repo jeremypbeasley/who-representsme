@@ -6,12 +6,12 @@
   <h1 class="Display1 Display3 WhiteText">
     Do you know who represents you?
   </h1>
-  <form class=>
+  <form id="zipForm">
     <label class="WhiteText">
       Enter your email
     </label>
-    <input type="number" pattern="[0-9]*" maxlength="3" class="InputZip">
-    <input type="submit" value="Go" class="SubmitZip">
+    <input type="tel" name="zip" id="zipInput" value="98144" class="InputZip">
+    <input type="submit" value="Go" class="ZipSubmit">
   </form>
   <div class="LandingPageQuote WhiteText">
     <p class="LandingPageQuoteSpan">
@@ -30,5 +30,6 @@
     </button>
   </a>
 </div>
+<div id="officialList"></div>
 
 <% include partials/footer %>

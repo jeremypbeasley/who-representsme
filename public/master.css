@@ -686,12 +686,12 @@ label.error {
     float: left;
   }
 }
-.RedBackground {
+.RedBackgroundContainer {
   background: #ff3700;
   height: 100vh;
 }
 @media (min-width: 62em) {
-  .RedBackground {
+  .Container {
     height: 100vh;
     width: 50%;
     position: relative;
@@ -738,6 +738,8 @@ label {
   border-bottom: 1px solid #fff;
   height: 3rem;
   width: 21rem;
+  font-size: 1.5rem;
+  color: #fff;
 }
 .SubmitZip {
   background: #fff;
