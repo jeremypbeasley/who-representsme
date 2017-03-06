@@ -134,6 +134,15 @@ button:hover,
   background-size: 11px;
   background-position: 9px 8px;
 }
+.WhiteText {
+  color: #fff;
+}
+.Italic {
+  font-style: italic;
+}
+.BlackText {
+  color: #000;
+}
 .mb0 {
   margin-bottom: 4px;
 }
@@ -673,7 +682,7 @@ label.error {
   margin-top: 55px;
 }
 .HeroImgContainer {
-  background: url("/_img/people_only.png");
+  background: url("_img/people_only.png");
   background-repeat: no-repeat;
   background-size: 100%;
   height: 35vh;
@@ -681,7 +690,7 @@ label.error {
 }
 @media (min-width: 62em) {
   .HeroImgContainer {
-    background: url("/_img/people_flag.png") no-repeat;
+    background: url "_img/people_flag.png" no-repeat;
     background-position: center center;
     background-size: 100%;
     height: 100vh;
@@ -707,7 +716,7 @@ label.error {
   }
 }
 .TinyLogo {
-  background-image: url("/_img/logo.svg");
+  background-image: url("_img/logo.svg");
   background-repeat: no-repeat;
   background-size: 100%;
   height: 18px;
