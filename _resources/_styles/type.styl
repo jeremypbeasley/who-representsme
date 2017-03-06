@@ -4,7 +4,7 @@ html
 	color: black;
 
 body, p
-	font-size 1.3rem
+	font-size 1.5rem
 
 .unselectable {
 	-moz-user-select: none;
@@ -24,7 +24,6 @@ a, a:focus, a:visited, a:active {
 strong {
 	font-weight normal
 }
-
 h1,h2,h3,h4,h5,h6 {
 	margin 0 0
 	padding: 0 0
@@ -36,9 +35,17 @@ h1,h2,h3,h4,h5,h6 {
 	cursor: default;
 }
 .Display1 {
-	font-family: typeface-secondary;
+	font-family: serif;
 	font-size: 3rem;
+  margin: 7rem 4rem 0 4rem;
+  font-size: 4rem;
+  width: 75%;
 }
+  @media laptop {
+    .Display1 {
+      width: 60%;
+    }
+  }
 .Display2 {
 	font-family: typeface-secondary;
 	font-size: 2rem;
@@ -49,6 +56,16 @@ h1,h2,h3,h4,h5,h6 {
 	text-transform: uppercase;
 	letter-spacing: .05rem;
 }
+.WhiteText {
+  color: white;
+}
+.Italic {
+  font-style: italic;
+}
+.BlackText {
+  color: #000;
+}
+
 
 // buttons
 

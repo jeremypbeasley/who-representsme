@@ -1,5 +1,35 @@
 <% include partials/header %>
 
-<h1>Do you know who represents you?</h1>
+<div class="FlagImgContainer"></div>
+<div class="RedBackground">
+  <div class="TinyLogo TinyLogoLandingPage"></div>
+  <h1 class="Display1 Display3 WhiteText">
+    Do you know who represents you?
+  </h1>
+  <form id="zipForm">
+    <label class="WhiteText">
+      Enter your email
+    </label>
+    <input type="tel" name="zip" id="zipInput" value="98144" class="InputZip">
+    <input type="submit" value="Go" class="ZipSubmit">
+  </form>
+  <div class="LandingPageQuote WhiteText">
+    <p class="LandingPageQuoteSpan">
+      &ldquo;When the people become involved&hellip; government becomes more accountable, and our society is stronger.&rdquo;
+    </p>
+    <p class="mt4">
+      &ndash;Arnold Schwarzenegger
+    </p>
+  </div>
+  <p class="BuiltBy">
+    Built by <a href="https://twitter.com/jeremypbeasley"><span class="BlackText BorderBottomBlack">@jeremypbeasley</span></a> and <a href="https://twitter.com/jennminerva"><span class="BlackText BorderBottomBlack">@jennminerva</span></a>
+  </p>
+  <a href="https://github.com/jeremypbeasley/who-representsme"
+    <button class="BtnGitHub">
+      GitHub
+    </button>
+  </a>
+</div>
+<div id="officialList"></div>
 
 <% include partials/footer %>

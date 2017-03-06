@@ -7,12 +7,12 @@
     <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Logo">
             <g>
-                <rect id="Rectangle-3" fill="#FF4F27" x="17" y="0" width="14.0510254" height="4"></rect>
-                <rect id="Rectangle-3-Copy-3" fill="#FF4F27" x="17" y="6" width="14.0510254" height="4"></rect>
-                <rect id="Rectangle-3-Copy" fill="#FF4F27" x="0" y="12" width="31.0544434" height="4"></rect>
-                <rect id="Rectangle-3-Copy-2" fill="#FF4F27" x="0" y="18" width="31.0544434" height="4"></rect>
-                <polygon id="Star" fill="#4BC4FF" points="10.9965814 8.30991362 8.52655827 9.60982731 8.99829072 6.85656593 7 4.90669538 9.76156986 4.50499996 10.9965814 2 12.231593 4.50499996 14.9931629 4.90669538 12.9948722 6.85656593 13.4666046 9.60982731"></polygon>
-                <polygon id="Star-Copy" fill="#4BC4FF" points="2.94620769 4.6515544 1.1253512 5.60982731 1.47310384 3.58017272 -2.32036612e-14 2.14276336 2.03577944 1.84664075 2.94620769 0 3.85663593 1.84664075 5.89241537 2.14276336 4.41931153 3.58017272 4.76706417 5.60982731"></polygon>
+                <rect id="Rectangle-3" fill="#ffffff" x="17" y="0" width="14.0510254" height="4"></rect>
+                <rect id="Rectangle-3-Copy-3" fill="#ffffff" x="17" y="6" width="14.0510254" height="4"></rect>
+                <rect id="Rectangle-3-Copy" fill="#ffffff" x="0" y="12" width="31.0544434" height="4"></rect>
+                <rect id="Rectangle-3-Copy-2" fill="#ffffff" x="0" y="18" width="31.0544434" height="4"></rect>
+                <polygon id="Star" fill="#000" points="10.9965814 8.30991362 8.52655827 9.60982731 8.99829072 6.85656593 7 4.90669538 9.76156986 4.50499996 10.9965814 2 12.231593 4.50499996 14.9931629 4.90669538 12.9948722 6.85656593 13.4666046 9.60982731"></polygon>
+                <polygon id="Star-Copy" fill="#000" points="2.94620769 4.6515544 1.1253512 5.60982731 1.47310384 3.58017272 -2.32036612e-14 2.14276336 2.03577944 1.84664075 2.94620769 0 3.85663593 1.84664075 5.89241537 2.14276336 4.41931153 3.58017272 4.76706417 5.60982731"></polygon>
             </g>
         </g>
     </g>
