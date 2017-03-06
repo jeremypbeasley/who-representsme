@@ -24,7 +24,6 @@ a, a:focus, a:visited, a:active {
 strong {
 	font-weight normal
 }
-
 h1,h2,h3,h4,h5,h6 {
 	margin 0 0
 	padding: 0 0
@@ -42,6 +41,11 @@ h1,h2,h3,h4,h5,h6 {
   font-size: 4rem;
   width: 75%;
 }
+  @media laptop {
+    .Display1 {
+      width: 60%;
+    }
+  }
 .Display2 {
 	font-family: typeface-secondary;
 	font-size: 2rem;
@@ -52,6 +56,16 @@ h1,h2,h3,h4,h5,h6 {
 	text-transform: uppercase;
 	letter-spacing: .05rem;
 }
+.WhiteText {
+  color: white;
+}
+.Italic {
+  font-style: italic;
+}
+.BlackText {
+  color: #000;
+}
+
 
 // buttons
 
@@ -96,13 +110,4 @@ button.filled, button:hover, .submitButton:hover {
 	background-repeat: no-repeat;
 	background-size: 11px;
 	background-position: 9px 8px;
-}
-.WhiteText {
-  color: white;
-}
-.Italic {
-  font-style: italic;
-}
-.BlackText {
-  color: #000;
 }
