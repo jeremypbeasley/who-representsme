@@ -71,6 +71,10 @@ h6 {
   position: relative;
   cursor: default;
 }
+h1 {
+  font-size: 1.6rem;
+  font-family: serif;
+}
 .Display1 {
   font-family: serif;
   font-size: 3rem;
@@ -806,13 +810,18 @@ label {
 }
 .InputShare {
   border: none;
-  height: 29px;
-  width: 200px;
-  margin: 0 0 0 15px;
+  height: 2.9rem;
+  width: 23rem;
+  margin: 0 0 0 1.5rem;
   border-right: 1px solid #ff3700;
   background: transparent;
+  font-size: 1.4rem;
+  color: #888;
 }
 .SubmitShare {
   border: none;
   background: transparent;
+  font-size: 1.4rem;
+  color: #ff3700;
+  padding: 0 1rem;
 }
