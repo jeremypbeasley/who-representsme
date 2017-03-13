@@ -813,6 +813,11 @@ label {
   width: 89%;
   margin: 2rem;
 }
+input {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
 .InputShare {
   border-radius: 0;
   border: none;
@@ -823,6 +828,7 @@ label {
   background: transparent;
   font-size: 1.4rem;
   color: #888;
+  webkit-appearance: none;
 }
 .SubmitShare {
   border: none;
