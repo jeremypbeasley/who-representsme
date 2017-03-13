@@ -814,7 +814,6 @@ label {
   margin: 2rem;
 }
 .InputShare {
-  -webkit-appearance: none;
   border-radius: 0;
   border: none;
   height: 2.9rem;
@@ -826,7 +825,6 @@ label {
   color: #888;
 }
 .SubmitShare {
-  -webkit-appearance: none;
   border: none;
   border-radius: 0;
   background: transparent;
