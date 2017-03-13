@@ -71,6 +71,10 @@ h6 {
   position: relative;
   cursor: default;
 }
+h1 {
+  font-size: 2.6rem;
+  font-family: serif;
+}
 .Display1 {
   font-family: serif;
   font-size: 3rem;
@@ -545,6 +549,11 @@ img {
 .officialBio {
   opacity: 1;
 }
+input,
+textarea,
+select {
+  -webkit-appearance: none;
+}
 input:focus {
   border-color: #000;
   outline: none;
@@ -797,4 +806,29 @@ label {
     right: 20rem;
     top: -2rem;
   }
+}
+.InputContainer {
+  border: 1px solid #ff3700;
+  border-radius: 5px;
+  width: 89%;
+  margin: 2rem;
+}
+.InputShare {
+  border-radius: 0;
+  border: none;
+  height: 2.9rem;
+  width: 24rem;
+  margin: 0 0 0 0.5rem;
+  border-right: 1px solid #ff3700;
+  background: transparent;
+  font-size: 1.4rem;
+  color: #888;
+}
+.SubmitShare {
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  font-size: 1.4rem;
+  color: #ff3700;
+  padding: 0 1rem;
 }
