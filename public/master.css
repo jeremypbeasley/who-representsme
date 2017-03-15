@@ -474,7 +474,6 @@ body {
   overflow-y: auto;
   overflow-x: hidden;
   margin: 0;
-  background: #ff3700;
 }
 .hidden {
   display: none;
