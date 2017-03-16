@@ -71,7 +71,7 @@ h6 {
   position: relative;
   cursor: default;
 }
-.Display1 {
+h1 {
   font-family: serif;
   font-size: 3rem;
   margin: 7rem 4rem 0 4rem;
@@ -79,13 +79,14 @@ h6 {
   width: 75%;
 }
 @media (min-width: 62em) {
-  .Display1 {
+  h1 {
     width: 60%;
+    font-size: 6rem;
   }
 }
-.Display2 {
-  font-family: CircularStdBold, ArialBold, sans-serif;
-  font-size: 2rem;
+h2 {
+  font-size: 2.6rem;
+  font-family: serif;
 }
 .Caption {
   font-size: 1.1rem;
@@ -545,6 +546,11 @@ img {
 .officialBio {
   opacity: 1;
 }
+input,
+textarea,
+select {
+  -webkit-appearance: none;
+}
 input:focus {
   border-color: #000;
   outline: none;
@@ -706,6 +712,7 @@ label.error {
 .ContentContainer {
   background: #ff3700;
   height: 100vh;
+  overflow: scroll;
 }
 @media (min-width: 62em) {
   .ContentContainer {
@@ -714,11 +721,6 @@ label.error {
     position: relative;
     float: right;
     padding: 0 0 0 11rem;
-  }
-}
-@media (min-width: 62em) {
-  .Display1 {
-    font-size: 6rem;
   }
 }
 .TinyLogo {
@@ -797,4 +799,36 @@ label {
     right: 20rem;
     top: -2rem;
   }
+}
+.ShareContainer {
+  border: 1px solid #ff3700;
+  border-radius: 5px;
+  width: 89%;
+  max-width: 34rem;
+  margin: 2rem;
+}
+input {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.InputShare {
+  border-radius: 0;
+  border: none;
+  height: 2.9rem;
+  width: 24rem;
+  margin: 0 0 0 0.5rem;
+  border-right: 1px solid #ff3700;
+  background: transparent;
+  font-size: 1.4rem;
+  color: #888;
+  webkit-appearance: none;
+}
+.BtnShare {
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  font-size: 1.4rem;
+  color: #ff3700;
+  padding: 0 1rem;
 }
