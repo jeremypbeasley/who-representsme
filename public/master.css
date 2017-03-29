@@ -103,6 +103,9 @@ h2 {
 .BlackText {
   color: #000;
 }
+.op50 {
+  opacity: 0.5;
+}
 button,
 .submitButton {
   background: #fff;
