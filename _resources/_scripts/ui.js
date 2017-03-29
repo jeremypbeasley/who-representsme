@@ -60,39 +60,29 @@ $('.SnackbarTrigger').click(function() {
 
 // OVERLAYS
 
-var OverlayStatus = false;
+$('.Overlay').hide();
+// var overlayStatus = false;
+// var content = "";
 
-$(".Overlay").hide();
-
-function openOverlay(Contents) {
-  if (OverlayStatus === false) {
-    $(".OverlayContent").html(Contents);
-    $(".Overlay ").show();
-    $(".Overlay ").addClass("Active");
-    OverlayStatus = true;
-  }
+function openOverlay() {
+  console.log('opening overlay');
+  $('.Overlay').show();
+  $('.Overlay').addClass('Active');
 }
 
-function CloseOverlay() {
-  $(".Overlay ").removeClass("Active");
-  setTimeout(waittohide, 200);
-  function waittohide() {
-    $(".LedgerItem").removeClass("Tapped");
-    $(".Overlay").hide();
-    openOverlay("");
-    OverlayStatus = false;
-  }
-}
 
-$(".OverlayClose").click(function() {
-  CloseOverlay();
-});
-// $(".Overlay").on("swipe",function(){
-//   CloseOverlay();
+
+
+
+// $(".OverlayClose").click(function() {
+//   closeOverlay();
 // });
-
-$(document).keyup(function(e) {
-  if (e.keyCode == 27) {
-    CloseOverlay();
-  }
-});
+// // $(".Overlay").on("swipe",function(){
+// //   CloseOverlay();
+// // });
+//
+// $(document).keyup(function(e) {
+//   if (e.keyCode == 27) {
+//     closeOverlay();
+//   }
+// });

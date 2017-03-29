@@ -201,42 +201,32 @@ $('.SnackbarTrigger').click(function() {
 
 // OVERLAYS
 
-var OverlayStatus = false;
+$('.Overlay').hide();
+// var overlayStatus = false;
+// var content = "";
 
-$(".Overlay").hide();
-
-function openOverlay(Contents) {
-  if (OverlayStatus === false) {
-    $(".OverlayContent").html(Contents);
-    $(".Overlay ").show();
-    $(".Overlay ").addClass("Active");
-    OverlayStatus = true;
-  }
+function openOverlay() {
+  console.log('opening overlay');
+  $('.Overlay').show();
+  $('.Overlay').addClass('Active');
 }
 
-function CloseOverlay() {
-  $(".Overlay ").removeClass("Active");
-  setTimeout(waittohide, 200);
-  function waittohide() {
-    $(".LedgerItem").removeClass("Tapped");
-    $(".Overlay").hide();
-    openOverlay("");
-    OverlayStatus = false;
-  }
-}
 
-$(".OverlayClose").click(function() {
-  CloseOverlay();
-});
-// $(".Overlay").on("swipe",function(){
-//   CloseOverlay();
+
+
+
+// $(".OverlayClose").click(function() {
+//   closeOverlay();
 // });
-
-$(document).keyup(function(e) {
-  if (e.keyCode == 27) {
-    CloseOverlay();
-  }
-});
+// // $(".Overlay").on("swipe",function(){
+// //   CloseOverlay();
+// // });
+//
+// $(document).keyup(function(e) {
+//   if (e.keyCode == 27) {
+//     closeOverlay();
+//   }
+// });
 
 // Random Zip Code
 
@@ -246,7 +236,7 @@ function getRandomZip() {
       //err
     } else {
       var zip = result[(Math.random() * (29900 - 1) + 1).toFixed(0)];
-      console.log(zip);
+      // console.log(zip);
       $('#zipInput').val(zip);
     }
   })
@@ -256,6 +246,7 @@ getRandomZip();
 //  OFFICIALS, Form
 
 $('#zipForm').submit(function(e) {
+    openOverlay();
     e.preventDefault();
     // validate the field has 5 characters AND those are all digits
     if ( $("input:first").val().length !== 5 ) {
@@ -301,11 +292,11 @@ function printOfficial(official) {
   if (!official.channels) {
     //err
   } else {
-    console.log(official.channels.length);
-    console.log(official.channels);
+    // console.log(official.channels.length);
+    // console.log(official.channels);
     for (x = 0; x < official.channels.length; x++) {
       if (official.channels[x].type == "Twitter") {
-        console.log("has twitter");
+        // console.log("has twitter");
         officialTwitter = '<p class="mt1"><a href="http://twitter.com/' + official.channels[x].id + '" target="_blank">@' + official.channels[x].id + '</a></p>';
       }
     }
