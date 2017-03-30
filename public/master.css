@@ -672,6 +672,7 @@ label.error {
   transition: all 100ms ease-out;
   opacity: 0;
   transform: scale(1.03);
+  display: none;
 }
 .Overlay.Active {
   opacity: 1;

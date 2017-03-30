@@ -206,13 +206,22 @@ $('.Overlay').hide();
 // var content = "";
 
 function openOverlay() {
-  console.log('opening overlay');
   $('.Overlay').show();
   $('.Overlay').addClass('Active');
 }
 
+function closeOverlay() {
+  $('.Overlay').hide();
+  $('.Overlay .OverlayContent').html("");
+}
 
+function populateOverlay(content) {
+  $('.Overlay .OverlayContent').html(content);
+}
 
+$(".OverlayClose").click(function() {
+  closeOverlay();
+});
 
 
 // $(".OverlayClose").click(function() {
@@ -251,18 +260,17 @@ $('#zipForm').submit(function(e) {
     // validate the field has 5 characters AND those are all digits
     if ( $("input:first").val().length !== 5 ) {
       displaySnackbar("Sorry, we need a 5 digit zip code.", "error");
-    } else {
-      var zip =
-      getOfficials(
-        $("input:first").val(),
-        [
-          "legislatorUpperBody",
-          "legislatorLowerBody",
-          "headOfGovernment",
-          "headOfGovernmentCity"
-        ]
-      );
     }
+    // otherwise, go get officials
+    getOfficials(
+      $("input:first").val(),
+      [
+        "legislatorUpperBody", // Senate
+        "legislatorLowerBody", // House
+        "headOfGovernment", // Governor
+        "headOfGovernmentCity" // Mayor
+      ]
+    );
 });
 
 // OFFICIALS, all
@@ -325,5 +333,5 @@ function printOfficial(official) {
       officialEmail,
     '</div>',
   ].join('\n');
-  $("#officialList").append(person);
+  $(".OverlayContent").append(person);
 };

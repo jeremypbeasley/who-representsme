@@ -65,13 +65,22 @@ $('.Overlay').hide();
 // var content = "";
 
 function openOverlay() {
-  console.log('opening overlay');
   $('.Overlay').show();
   $('.Overlay').addClass('Active');
 }
 
+function closeOverlay() {
+  $('.Overlay').hide();
+  $('.Overlay .OverlayContent').html("");
+}
 
+function populateOverlay(content) {
+  $('.Overlay .OverlayContent').html(content);
+}
 
+$(".OverlayClose").click(function() {
+  closeOverlay();
+});
 
 
 // $(".OverlayClose").click(function() {
