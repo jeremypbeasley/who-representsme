@@ -729,7 +729,7 @@ label.error {
   .HeroImgContainer {
     background: url("_img/people_flag.png") no-repeat;
     background-position: center center;
-    background-size: 100%;
+    background-size: cover;
     height: 100vh;
     width: 50%;
     float: left;
