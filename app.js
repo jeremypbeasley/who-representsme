@@ -115,7 +115,7 @@ app.get('/api/officials/:zip', (req, res) => {
             newObj['urls'] = officials[indice]['urls'];
             newObj['channels'] = officials[indice]['channels'];
             if (!officials[indice]['photoUrl']) {
-              newObj['photos'] = "/_img/noimage.gif"
+              newObj['photos'] = "/_img/noimage.svg"
             } else {
               newObj['photos'] = officials[indice]['photoUrl'];
             }
