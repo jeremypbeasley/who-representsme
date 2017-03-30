@@ -236,6 +236,10 @@ $(document).keyup(function(e) {
   }
 });
 
+$(".OverlayScrim").click(function() {
+  closeOverlay();
+});
+
 
 
 // $(".OverlayClose").click(function() {
