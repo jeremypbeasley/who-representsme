@@ -4,31 +4,35 @@
   background-size: 100%;
   height: 35vh;
   width: 100%;
+  transition: all 200ms ease-out;
 }
-  @media laptop {
-    .HeroImgContainer {
-      background: url("_img/people_flag.png") no-repeat;
-      background-position: center center;
-      background-size: 100%;
-      height: 100vh;
-      width: 50%;
-      float: left;
-    }
+.HeroImgContainer.InActive {
+  opacity: .5;
+}
+@media laptop {
+  .HeroImgContainer {
+    background: url("_img/people_flag.png") no-repeat;
+    background-position: center center;
+    background-size: 100%;
+    height: 100vh;
+    width: 50%;
+    float: left;
   }
+}
 .ContentContainer {
   background: #FF3700;
   height: 100vh;
   overflow: scroll;
 }
-  @media laptop {
-    .ContentContainer {
-      height:100vh;
-      width: 50%;
-      position: relative;
-      float: right;
-      padding: 0 0 0 11rem;
-    }
+@media laptop {
+  .ContentContainer {
+    height:100vh;
+    width: 50%;
+    position: relative;
+    float: right;
+    padding: 0 0 0 11rem;
   }
+}
 .TinyLogo{
   background-image: url("_img/logo.svg");
   background-repeat: no-repeat;

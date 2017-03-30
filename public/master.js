@@ -207,11 +207,13 @@ function openOverlay() {
   $('.Overlay').show();
   setTimeout(function(){
     $('.Overlay').addClass("Active");
+    $('.HeroImgContainer').addClass("InActive");
   }, 1);
 }
 
 function closeOverlay() {
   $('.Overlay').removeClass("Active");
+  $('.HeroImgContainer').removeClass("InActive");
   setTimeout(function(){
     $('.Overlay').hide();
     $('.Overlay .OverlayContent').html("");
@@ -224,6 +226,12 @@ function populateOverlay(content) {
 
 $(".OverlayClose").click(function() {
   closeOverlay();
+});
+
+$(document).keyup(function(e) {
+  if (e.keyCode == 27) {
+    closeOverlay();
+  }
 });
 
 
