@@ -201,42 +201,44 @@ $('.SnackbarTrigger').click(function() {
 
 // OVERLAYS
 
-var OverlayStatus = false;
+$('.Overlay').hide();
 
-$(".Overlay").hide();
-
-function openOverlay(Contents) {
-  if (OverlayStatus === false) {
-    $(".OverlayContent").html(Contents);
-    $(".Overlay ").show();
-    $(".Overlay ").addClass("Active");
-    OverlayStatus = true;
-  }
+function openOverlay() {
+  $('.Overlay').show();
+  setTimeout(function(){
+    $('.Overlay').addClass("Active");
+  }, 1);
 }
 
-function CloseOverlay() {
-  $(".Overlay ").removeClass("Active");
-  setTimeout(waittohide, 200);
-  function waittohide() {
-    $(".LedgerItem").removeClass("Tapped");
-    $(".Overlay").hide();
-    openOverlay("");
-    OverlayStatus = false;
-  }
+function closeOverlay() {
+  $('.Overlay').removeClass("Active");
+  setTimeout(function(){
+    $('.Overlay').hide();
+    $('.Overlay .OverlayContent').html("");
+  }, 200);
+}
+
+function populateOverlay(content) {
+  $('.Overlay .OverlayContent').html(content);
 }
 
 $(".OverlayClose").click(function() {
-  CloseOverlay();
+  closeOverlay();
 });
-// $(".Overlay").on("swipe",function(){
-//   CloseOverlay();
-// });
 
-$(document).keyup(function(e) {
-  if (e.keyCode == 27) {
-    CloseOverlay();
-  }
-});
+
+// $(".OverlayClose").click(function() {
+//   closeOverlay();
+// });
+// // $(".Overlay").on("swipe",function(){
+// //   CloseOverlay();
+// // });
+//
+// $(document).keyup(function(e) {
+//   if (e.keyCode == 27) {
+//     closeOverlay();
+//   }
+// });
 
 // Random Zip Code
 
@@ -246,7 +248,7 @@ function getRandomZip() {
       //err
     } else {
       var zip = result[(Math.random() * (29900 - 1) + 1).toFixed(0)];
-      console.log(zip);
+      // console.log(zip);
       $('#zipInput').val(zip);
     }
   })
@@ -256,22 +258,22 @@ getRandomZip();
 //  OFFICIALS, Form
 
 $('#zipForm').submit(function(e) {
+    openOverlay();
     e.preventDefault();
     // validate the field has 5 characters AND those are all digits
     if ( $("input:first").val().length !== 5 ) {
       displaySnackbar("Sorry, we need a 5 digit zip code.", "error");
-    } else {
-      var zip =
-      getOfficials(
-        $("input:first").val(),
-        [
-          "legislatorUpperBody",
-          "legislatorLowerBody",
-          "headOfGovernment",
-          "headOfGovernmentCity"
-        ]
-      );
     }
+    // otherwise, go get officials
+    getOfficials(
+      $("input:first").val(),
+      [
+        "legislatorUpperBody", // Senate
+        "legislatorLowerBody", // House
+        "headOfGovernment", // Governor
+        "headOfGovernmentCity" // Mayor
+      ]
+    );
 });
 
 // OFFICIALS, all
@@ -301,11 +303,11 @@ function printOfficial(official) {
   if (!official.channels) {
     //err
   } else {
-    console.log(official.channels.length);
-    console.log(official.channels);
+    // console.log(official.channels.length);
+    // console.log(official.channels);
     for (x = 0; x < official.channels.length; x++) {
       if (official.channels[x].type == "Twitter") {
-        console.log("has twitter");
+        // console.log("has twitter");
         officialTwitter = '<p class="mt1"><a href="http://twitter.com/' + official.channels[x].id + '" target="_blank">@' + official.channels[x].id + '</a></p>';
       }
     }
@@ -334,5 +336,5 @@ function printOfficial(official) {
       officialEmail,
     '</div>',
   ].join('\n');
-  $("#officialList").append(person);
+  $(".OverlayContent").append(person);
 };

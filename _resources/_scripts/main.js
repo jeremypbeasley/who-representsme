@@ -6,7 +6,7 @@ function getRandomZip() {
       //err
     } else {
       var zip = result[(Math.random() * (29900 - 1) + 1).toFixed(0)];
-      console.log(zip);
+      // console.log(zip);
       $('#zipInput').val(zip);
     }
   })
@@ -16,22 +16,22 @@ getRandomZip();
 //  OFFICIALS, Form
 
 $('#zipForm').submit(function(e) {
+    openOverlay();
     e.preventDefault();
     // validate the field has 5 characters AND those are all digits
     if ( $("input:first").val().length !== 5 ) {
       displaySnackbar("Sorry, we need a 5 digit zip code.", "error");
-    } else {
-      var zip =
-      getOfficials(
-        $("input:first").val(),
-        [
-          "legislatorUpperBody",
-          "legislatorLowerBody",
-          "headOfGovernment",
-          "headOfGovernmentCity"
-        ]
-      );
     }
+    // otherwise, go get officials
+    getOfficials(
+      $("input:first").val(),
+      [
+        "legislatorUpperBody", // Senate
+        "legislatorLowerBody", // House
+        "headOfGovernment", // Governor
+        "headOfGovernmentCity" // Mayor
+      ]
+    );
 });
 
 // OFFICIALS, all
@@ -61,11 +61,11 @@ function printOfficial(official) {
   if (!official.channels) {
     //err
   } else {
-    console.log(official.channels.length);
-    console.log(official.channels);
+    // console.log(official.channels.length);
+    // console.log(official.channels);
     for (x = 0; x < official.channels.length; x++) {
       if (official.channels[x].type == "Twitter") {
-        console.log("has twitter");
+        // console.log("has twitter");
         officialTwitter = '<p class="mt1"><a href="http://twitter.com/' + official.channels[x].id + '" target="_blank">@' + official.channels[x].id + '</a></p>';
       }
     }
@@ -94,5 +94,5 @@ function printOfficial(official) {
       officialEmail,
     '</div>',
   ].join('\n');
-  $("#officialList").append(person);
+  $(".OverlayContent").append(person);
 };

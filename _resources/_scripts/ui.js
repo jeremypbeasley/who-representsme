@@ -60,39 +60,41 @@ $('.SnackbarTrigger').click(function() {
 
 // OVERLAYS
 
-var OverlayStatus = false;
+$('.Overlay').hide();
 
-$(".Overlay").hide();
-
-function openOverlay(Contents) {
-  if (OverlayStatus === false) {
-    $(".OverlayContent").html(Contents);
-    $(".Overlay ").show();
-    $(".Overlay ").addClass("Active");
-    OverlayStatus = true;
-  }
+function openOverlay() {
+  $('.Overlay').show();
+  setTimeout(function(){
+    $('.Overlay').addClass("Active");
+  }, 1);
 }
 
-function CloseOverlay() {
-  $(".Overlay ").removeClass("Active");
-  setTimeout(waittohide, 200);
-  function waittohide() {
-    $(".LedgerItem").removeClass("Tapped");
-    $(".Overlay").hide();
-    openOverlay("");
-    OverlayStatus = false;
-  }
+function closeOverlay() {
+  $('.Overlay').removeClass("Active");
+  setTimeout(function(){
+    $('.Overlay').hide();
+    $('.Overlay .OverlayContent').html("");
+  }, 200);
+}
+
+function populateOverlay(content) {
+  $('.Overlay .OverlayContent').html(content);
 }
 
 $(".OverlayClose").click(function() {
-  CloseOverlay();
+  closeOverlay();
 });
-// $(".Overlay").on("swipe",function(){
-//   CloseOverlay();
-// });
 
-$(document).keyup(function(e) {
-  if (e.keyCode == 27) {
-    CloseOverlay();
-  }
-});
+
+// $(".OverlayClose").click(function() {
+//   closeOverlay();
+// });
+// // $(".Overlay").on("swipe",function(){
+// //   CloseOverlay();
+// // });
+//
+// $(document).keyup(function(e) {
+//   if (e.keyCode == 27) {
+//     closeOverlay();
+//   }
+// });
