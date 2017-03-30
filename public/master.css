@@ -674,6 +674,12 @@ label.error {
   transform: scale(1.03);
   display: none;
 }
+@media (min-width: 62em) {
+  .Overlay {
+    width: 50vw;
+    left: 50vw;
+  }
+}
 .Overlay.Active {
   opacity: 1;
   transform: scale(1);
