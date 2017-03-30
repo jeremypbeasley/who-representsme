@@ -64,17 +64,21 @@ $('.Overlay').hide();
 
 function openOverlay() {
   $('.Overlay').show();
+  $('.OverlayScrim').show();
   setTimeout(function(){
     $('.Overlay').addClass("Active");
+    $('.OverlayScrim').addClass("Active");
   }, 1);
 }
 
 function closeOverlay() {
   $('.Overlay').removeClass("Active");
+  $('.OverlayScrim').removeClass("Active");
   setTimeout(function(){
     $('.Overlay').hide();
+    $('.OverlayScrim').hide();
     $('.Overlay .OverlayContent').html("");
-  }, 200);
+  }, 100);
 }
 
 function populateOverlay(content) {
@@ -84,6 +88,17 @@ function populateOverlay(content) {
 $(".OverlayClose").click(function() {
   closeOverlay();
 });
+
+$(document).keyup(function(e) {
+  if (e.keyCode == 27) {
+    closeOverlay();
+  }
+});
+
+$(".OverlayScrim").click(function() {
+  closeOverlay();
+});
+
 
 
 // $(".OverlayClose").click(function() {
