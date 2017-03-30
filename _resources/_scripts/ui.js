@@ -64,19 +64,21 @@ $('.Overlay').hide();
 
 function openOverlay() {
   $('.Overlay').show();
+  $('.OverlayScrim').show();
   setTimeout(function(){
     $('.Overlay').addClass("Active");
-    $('.HeroImgContainer').addClass("InActive");
+    $('.OverlayScrim').addClass("Active");
   }, 1);
 }
 
 function closeOverlay() {
   $('.Overlay').removeClass("Active");
-  $('.HeroImgContainer').removeClass("InActive");
+  $('.OverlayScrim').removeClass("Active");
   setTimeout(function(){
     $('.Overlay').hide();
+    $('.OverlayScrim').hide();
     $('.Overlay .OverlayContent').html("");
-  }, 200);
+  }, 100);
 }
 
 function populateOverlay(content) {
@@ -92,6 +94,7 @@ $(document).keyup(function(e) {
     closeOverlay();
   }
 });
+
 
 
 // $(".OverlayClose").click(function() {
