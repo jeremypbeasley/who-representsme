@@ -669,7 +669,7 @@ label.error {
   left: 0;
   top: 0;
   z-index: 999;
-  transition: all 100ms ease-out;
+  transition: all 200ms ease-out;
   opacity: 0;
   transform: scale(1.03);
   display: none;

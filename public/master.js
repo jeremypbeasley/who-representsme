@@ -202,17 +202,20 @@ $('.SnackbarTrigger').click(function() {
 // OVERLAYS
 
 $('.Overlay').hide();
-// var overlayStatus = false;
-// var content = "";
 
 function openOverlay() {
   $('.Overlay').show();
-  $('.Overlay').addClass('Active');
+  setTimeout(function(){
+    $('.Overlay').addClass("Active");
+  }, 1);
 }
 
 function closeOverlay() {
-  $('.Overlay').hide();
-  $('.Overlay .OverlayContent').html("");
+  $('.Overlay').removeClass("Active");
+  setTimeout(function(){
+    $('.Overlay').hide();
+    $('.Overlay .OverlayContent').html("");
+  }, 200);
 }
 
 function populateOverlay(content) {
