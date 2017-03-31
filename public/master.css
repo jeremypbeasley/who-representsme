@@ -80,7 +80,7 @@ h6 {
   cursor: default;
 }
 h1 {
-  font-family: 'Iowanoldstyle';
+  font-family: 'Iowanoldstyle', serif;
   font-size: 3rem;
   margin: 7rem 4rem 0 4rem;
   font-size: 4rem;
@@ -94,7 +94,7 @@ h1 {
 }
 h2 {
   font-size: 2.6rem;
-  font-family: 'Iowanoldstyle';
+  font-family: 'Iowanoldstyle', serif;
 }
 .Caption {
   font-size: 1.1rem;
