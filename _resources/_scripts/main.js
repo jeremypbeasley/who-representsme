@@ -83,8 +83,8 @@ function printOfficial(official) {
     var party = "";
   }
   person = [
-    '<div>',
-      '<div class="officialPhoto" style="background-image: url(' + official.photos + ')"></div>',
+    '<div class="OfficialContainer">',
+      '<div class="officialPhoto OfficialPhoto" style="background-image: url(' + official.photos + ')"></div>',
       '<p class="op50">' + official.office + party + '</p>',
       '<p>' + official.name + '</p>',
       officialTwitter,
@@ -94,5 +94,5 @@ function printOfficial(official) {
       officialEmail,
     '</div>',
   ].join('\n');
-  $(".OverlayContent").append(person);
+  $(".OfficialsContainer").append(person);
 };
