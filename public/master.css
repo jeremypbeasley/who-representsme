@@ -27,12 +27,12 @@
 }
 @font-face {
     font-family: 'Iowanoldstyle';
-    src: url('fonts/Iowanoldstyle.eot');
-    src: url('fonts/Iowanoldstyle.eot') format('embedded-opentype'),
-         url('fonts/Iowanoldstyle.woff2') format('woff2'),
-         url('fonts/Iowanoldstyle.woff') format('woff'),
-         url('fonts/Iowanoldstyle.ttf') format('truetype'),
-         url('fonts/Iowanoldstyle.svg#Iowanoldstyle') format('svg');
+    src: url('_fonts/Iowanoldstyle.eot');
+    src: url('_fonts/Iowanoldstyle.eot') format('embedded-opentype'),
+         url('_fonts/Iowanoldstyle.woff2') format('woff2'),
+         url('_fonts/Iowanoldstyle.woff') format('woff'),
+         url('_fonts/Iowanoldstyle.ttf') format('truetype'),
+         url('_fonts/Iowanoldstyle.svg#Iowanoldstyle') format('svg');
 }
 
 html {
