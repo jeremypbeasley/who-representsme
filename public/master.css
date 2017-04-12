@@ -731,6 +731,9 @@ label.error {
 .OfficialInfo {
   margin: 0 0 0 17rem;
 }
+.OfficialPhoto {
+  filter: grayscale(100%);
+}
 .HeroImgContainer {
   background: url("_img/people_only.png");
   background-repeat: no-repeat;
