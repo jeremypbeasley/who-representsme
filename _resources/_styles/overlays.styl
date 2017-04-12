@@ -64,9 +64,16 @@
 
 .AllOfficialsContainer {
   display: flex;
-  flex-wrap: wrap;
-  padding: 0 0 0 6rem;
+  // flex-direction: column;
+  margin: 1rem;
 }
+  @media laptop {
+    .AllOfficialsContainer {
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding: 0 0 0 6rem;
+    }
+  }
 .IndividualOfficialContainer {
   min-width: 45%;
   margin: 1rem 2rem 2rem 0;

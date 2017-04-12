@@ -720,8 +720,14 @@ label.error {
 }
 .AllOfficialsContainer {
   display: flex;
-  flex-wrap: wrap;
-  padding: 0 0 0 6rem;
+  margin: 1rem;
+}
+@media (min-width: 62em) {
+  .AllOfficialsContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 0 0 6rem;
+  }
 }
 .IndividualOfficialContainer {
   min-width: 45%;
