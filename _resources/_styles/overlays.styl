@@ -59,3 +59,29 @@
     opacity: .8;
   }
 }
+
+// OFFICIALS
+
+.AllOfficialsContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+  @media laptop {
+    .AllOfficialsContainer {
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding: 0 0 0 6rem;
+    }
+  }
+.IndividualOfficialContainer {
+  min-width: 45%;
+  margin: 1rem 2rem 2rem 0;
+  width: 37rem;
+}
+.OfficialInfo {
+  margin: 0 0 0 17rem;
+}
+.OfficialPhoto {
+  filter: grayscale(100%);
+}
