@@ -720,6 +720,7 @@ label.error {
 }
 .AllOfficialsContainer {
   display: flex;
+  flex-direction: column;
   margin: 1rem;
 }
 @media (min-width: 62em) {
