@@ -718,19 +718,18 @@ label.error {
     opacity: 0.8;
   }
 }
-.OfficialContainer {
-  width: 37rem;
-}
-.OfficialsContainer {
+.AllOfficialsContainer {
   display: flex;
   flex-wrap: wrap;
+  padding: 0 0 0 6rem;
 }
-.OfficialIndividualContainer {
-  background: #ccc;
+.IndividualOfficialContainer {
   min-width: 45%;
   margin: 1rem 2rem 2rem 0;
-  display: flex;
   width: 37rem;
+}
+.OfficialInfo {
+  margin: 0 0 0 17rem;
 }
 .HeroImgContainer {
   background: url("_img/people_only.png");

@@ -66,15 +66,15 @@ function printOfficial(official) {
     for (x = 0; x < official.channels.length; x++) {
       if (official.channels[x].type == "Twitter") {
         // console.log("has twitter");
-        officialTwitter = '<p class="mt1"><a href="http://twitter.com/' + official.channels[x].id + '" target="_blank">@' + official.channels[x].id + '</a></p>';
+        officialTwitter = '<p class="mt1 op50"><a href="http://twitter.com/' + official.channels[x].id + '" target="_blank">@' + official.channels[x].id + '</a></p>';
       }
     }
   }
   //email
   if (!official.emails) {
-    var officialEmail = '<p>None available</p>';
+    var officialEmail = '<p class="op50">None available</p>';
   } else {
-    var officialEmail = '<p class=""><a href="mailto:' + official.emails[0] + '">' + official.emails[0] + '</a></p>';
+    var officialEmail = '<p class="op50"><a href="mailto:' + official.emails[0] + '">' + official.emails[0] + '</a></p>';
   }
   // party
   if (official.party == "Republican" || official.party == "Democrat" || official.party == "Green" || official.party == "Independent") {
@@ -83,16 +83,18 @@ function printOfficial(official) {
     var party = "";
   }
   person = [
-    '<div class="OfficialContainer">',
+    '<div class="IndividualOfficialContainer">',
       '<div class="officialPhoto OfficialPhoto" style="background-image: url(' + official.photos + ')"></div>',
-      '<p class="op50">' + official.office + party + '</p>',
-      '<p>' + official.name + '</p>',
-      officialTwitter,
-      '<p class=""><a href="tel:',
-       official.phones[0].replace(/[^A-Z0-9]/ig, "") + '">' + official.phones,
-       '</a></p>',
-      officialEmail,
+      '<div class="OfficialInfo">',
+        '<p class="op50">' + official.office + party + '</p>',
+        '<p>' + official.name + '</p>',
+        officialTwitter,
+        '<p class="op50"><a href="tel:',
+         official.phones[0].replace(/[^A-Z0-9]/ig, "") + '">' + official.phones,
+         '</a></p>',
+        officialEmail,
+      '</div>',
     '</div>',
   ].join('\n');
-  $(".OfficialsContainer").append(person);
+  $(".AllOfficialsContainer").append(person);
 };
