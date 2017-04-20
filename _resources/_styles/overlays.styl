@@ -67,7 +67,6 @@
   flex-direction: column;
   margin: 0 auto;
   padding: 1rem;
-
 }
   @media laptop {
     .AllOfficialsContainer {
@@ -77,10 +76,15 @@
     }
   }
 .IndividualOfficialContainer {
-  min-width: 45%;
+  max-width: 45%;
   padding: 1rem 2rem 2rem 0;
-  margin: 0 auto;
 }
+// Specified phone instead of laptop because I couldn't undo `margin: 0 auto` with a laptop media query. Idk if I did something wrong, but it works.
+  @media phone {
+    .AllOfficialsContainer {
+      margin: 0 auto;
+    }
+  }
 .OfficialInfo {
   margin: 0 0 0 17rem;
 }
