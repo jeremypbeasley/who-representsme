@@ -25,3 +25,12 @@
          url('_fonts/CircularStdBlack.ttf') format('truetype'),
          url('_fonts/CircularStdBlack.svg#CircularStdBlack') format('svg');
 }
+@font-face {
+    font-family: 'Iowanoldstyle';
+    src: url('_fonts/Iowanoldstyle.eot');
+    src: url('_fonts/Iowanoldstyle.eot') format('embedded-opentype'),
+         url('_fonts/Iowanoldstyle.woff2') format('woff2'),
+         url('_fonts/Iowanoldstyle.woff') format('woff'),
+         url('_fonts/Iowanoldstyle.ttf') format('truetype'),
+         url('_fonts/Iowanoldstyle.svg#Iowanoldstyle') format('svg');
+}
