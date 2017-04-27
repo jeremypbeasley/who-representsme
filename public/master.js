@@ -323,15 +323,15 @@ function printOfficial(official) {
     for (x = 0; x < official.channels.length; x++) {
       if (official.channels[x].type == "Twitter") {
         // console.log("has twitter");
-        officialTwitter = '<p class="mt1 op50"><a href="http://twitter.com/' + official.channels[x].id + '" target="_blank">@' + official.channels[x].id + '</a></p>';
+        officialTwitter = '<p class="mt1"><a href="http://twitter.com/' + official.channels[x].id + '" target="_blank">@' + official.channels[x].id + '</a></p>';
       }
     }
   }
   //email
   if (!official.emails) {
-    var officialEmail = '<p class="op50">None available</p>';
+    var officialEmail = '<p class>None available</p>';
   } else {
-    var officialEmail = '<p class="op50"><a href="mailto:' + official.emails[0] + '">' + official.emails[0] + '</a></p>';
+    var officialEmail = '<p><a href="mailto:' + official.emails[0] + '">' + official.emails[0] + '</a></p>';
   }
   // party
   if (official.party == "Republican" || official.party == "Democrat" || official.party == "Green" || official.party == "Independent") {
@@ -340,18 +340,20 @@ function printOfficial(official) {
     var party = "";
   }
   person = [
-    '<div class="IndividualOfficialContainer">',
+    '<div class="OfficialSingle">',
       '<div class="officialPhoto OfficialPhoto" style="background-image: url(' + official.photos + ')"></div>',
       '<div class="OfficialInfo">',
-        '<p class="op50">' + official.office + party + '</p>',
-        '<p>' + official.name + '</p>',
+        '<p class="op50 OfficialOffice">' + official.office + party + '</p>',
+        '<p class="OfficialName">' + official.name + '</p>',
         officialTwitter,
-        '<p class="op50"><a href="tel:',
+        '<p><a href="tel:',
          official.phones[0].replace(/[^A-Z0-9]/ig, "") + '">' + official.phones,
          '</a></p>',
         officialEmail,
+        '<p class="OfficialSite">Official site</p>',
       '</div>',
     '</div>',
+    '<div class="OfficialDivider class="pt4 pb4></div>',
   ].join('\n');
-  $(".AllOfficialsContainer").append(person);
+  $(".OfficialContainer").append(person);
 };

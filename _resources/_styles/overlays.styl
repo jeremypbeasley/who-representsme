@@ -62,32 +62,53 @@
 
 // OFFICIALS
 
-.AllOfficialsContainer {
+.OfficialRoster {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
   padding: 1rem;
+  font-size: 1.3rem;
 }
   @media laptop {
-    .AllOfficialsContainer {
+    .OfficialRoster {
       flex-direction: row;
       flex-wrap: wrap;
-      padding: 0 0 0 3rem;
+      // padding: 0 0 0 3rem;
     }
   }
-.IndividualOfficialContainer {
-  max-width: 45%;
-  padding: 1rem 2rem 2rem 0;
+.OfficialSingle {
+  padding: 5rem 2rem 3rem 0;
+  word-break: break-word;
 }
+ @media laptop {
+   .OfficialSingle {
+    width: 23vw;
+  }
+ }
 // Specified phone instead of laptop because I couldn't undo `margin: 0 auto` with a laptop media query. Idk if I did something wrong, but it works.
   @media phone {
-    .AllOfficialsContainer {
+    .OfficialRoster {
       margin: 0 auto;
     }
   }
 .OfficialInfo {
-  margin: 0 0 0 17rem;
+  margin: 0 2rem 0 24rem;
 }
 .OfficialPhoto {
   filter: grayscale(100%);
+  width: 165px;
+  height: 165px;
+  margin: 0 0 0 5rem;
+}
+.OfficialOffice {
+  margin: 0 0 1rem 0;
+}
+.OfficialName {
+  font-weight: bold;
+  font-size: 2rem;
+}
+.OfficialDivider {
+  width: 90%;
+  border-bottom: 1px solid #ccc;
+  margin: 0 auto;
+  height: 1px;
 }
