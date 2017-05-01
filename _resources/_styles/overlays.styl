@@ -61,12 +61,14 @@
 }
 
 // OFFICIALS
-
+.OfficialRoster p {
+  font-size: 1.3rem;
+}
 .OfficialRoster {
    display: flex;
    flex-direction: column;
-  //  padding: 1rem;
-  //  font-size: 1.3rem;
+   margin: 1rem;
+   justify-content: center;
  }
   @media laptop {
      .OfficialRoster {
@@ -77,33 +79,23 @@
 .OfficialSingle {
   display: flex;
   flex-direction: row;
-  // width: 25rem;
-  // padding: 5rem 2rem 3rem 0;
-  word-break: break-word;
+  align-items: center;
+  margin: 1rem 0;
 }
-
-// // Specified phone instead of laptop because I couldn't undo `margin: 0 auto` with a laptop media query. Idk if I did something wrong, but it works.
-//   @media phone {
-//     .OfficialRoster {
-//       margin: 0 auto;
-//     }
-//   }
 .OfficialPhoto {
   filter: grayscale(100%);
   width: 165px;
   height: 165px;
-  margin: 0 0 0 5rem;
+  margin: 0 3rem 0 3rem;
 }
   @media laptop {
     .OfficialPhoto {
-      width: 155px;
-      height: 155px;
+      width: 125px;
+      height: 125px;
     }
   }
 .OfficialInfo {
-  // margin: 0 2rem 0 24rem;
   width: 13rem;
-  background: #97B2B6;
 }
 .OfficialOffice {
   margin: 0 0 1rem 0;
