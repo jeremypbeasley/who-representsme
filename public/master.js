@@ -353,7 +353,7 @@ function printOfficial(official) {
         '<p class="OfficialSite">Official site</p>',
       '</div>',
     '</div>',
-    '<div class="OfficialDivider class="pt4 pb4></div>',
+    // '<div class="OfficialDivider class="pt4 pb4></div>',
   ].join('\n');
-  $(".OfficialContainer").append(person);
+  $(".OfficialRoster").append(person);
 };

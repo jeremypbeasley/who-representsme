@@ -721,8 +721,6 @@ label.error {
 .OfficialRoster {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
-  font-size: 1.3rem;
 }
 @media (min-width: 62em) {
   .OfficialRoster {
@@ -731,21 +729,9 @@ label.error {
   }
 }
 .OfficialSingle {
-  padding: 5rem 2rem 3rem 0;
+  display: flex;
+  flex-direction: row;
   word-break: break-word;
-}
-@media (min-width: 62em) {
-  .OfficialSingle {
-    width: 23vw;
-  }
-}
-@media (min-width: 30em) {
-  .OfficialRoster {
-    margin: 0 auto;
-  }
-}
-.OfficialInfo {
-  margin: 0 2rem 0 24rem;
 }
 .OfficialPhoto {
   filter: grayscale(100%);
@@ -753,12 +739,18 @@ label.error {
   height: 165px;
   margin: 0 0 0 5rem;
 }
+@media (min-width: 62em) {
+  .OfficialPhoto {
+    width: 155px;
+    height: 155px;
+  }
+}
+.OfficialInfo {
+  width: 13rem;
+  background: #97b2b6;
+}
 .OfficialOffice {
   margin: 0 0 1rem 0;
-}
-.OfficialName {
-  font-weight: bold;
-  font-size: 2rem;
 }
 .OfficialDivider {
   width: 90%;
