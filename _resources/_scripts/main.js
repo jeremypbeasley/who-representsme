@@ -92,7 +92,6 @@ function printOfficial(official) {
         '<p><a href="tel:',
          official.phones[0].replace(/[^A-Z0-9]/ig, "") + '">' + official.phones,
          '</a></p>',
-        officialEmail,
         '<p class="OfficialSite">Official site</p>',
       '</div>',
     '</div>',
