@@ -345,7 +345,7 @@ function printOfficial(official) {
       '<div class="officialPhoto OfficialPhoto" style="background-image: url(' + official.photos + ')"></div>',
       '<div class="OfficialInfo">',
         '<p class="op50 OfficialOffice">' + official.office + party + '</p>',
-        '<p class="OfficialName">' + official.name + '</p>',
+        '<h3 class="OfficialName HeadingSmall">' + official.name + '</h3>',
         officialTwitter,
         '<p><a href="tel:',
          official.phones[0].replace(/[^A-Z0-9]/ig, "") + '">' + official.phones,
