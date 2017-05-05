@@ -726,6 +726,51 @@ label.error {
     opacity: 0.8;
   }
 }
+.OfficialRoster p {
+  font-size: 1.3rem;
+}
+.OfficialRoster {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  justify-content: center;
+}
+@media (min-width: 62em) {
+  .OfficialRoster {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+.OfficialSingle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 1rem 0;
+}
+.OfficialPhoto {
+  filter: grayscale(100%);
+  width: 165px;
+  height: 165px;
+  margin: 0 3rem 0 3rem;
+}
+@media (min-width: 62em) {
+  .OfficialPhoto {
+    width: 125px;
+    height: 125px;
+  }
+}
+.OfficialInfo {
+  width: 13rem;
+}
+.OfficialOffice {
+  margin: 0 0 1rem 0;
+}
+.OfficialDivider {
+  width: 90%;
+  border-bottom: 1px solid #ccc;
+  margin: 0 auto;
+  height: 1px;
+}
 .HeroImgContainer {
   background: url("_img/people_only.png");
   background-repeat: no-repeat;

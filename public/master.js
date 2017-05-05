@@ -329,9 +329,9 @@ function printOfficial(official) {
   }
   //email
   if (!official.emails) {
-    var officialEmail = '<p>None available</p>';
+    var officialEmail = '<p class>None available</p>';
   } else {
-    var officialEmail = '<p class=""><a href="mailto:' + official.emails[0] + '">' + official.emails[0] + '</a></p>';
+    var officialEmail = '<p><a href="mailto:' + official.emails[0] + '">' + official.emails[0] + '</a></p>';
   }
   // party
   if (official.party == "Republican" || official.party == "Democrat" || official.party == "Green" || official.party == "Independent") {
@@ -340,16 +340,20 @@ function printOfficial(official) {
     var party = "";
   }
   person = [
-    '<div>',
-      '<div class="officialPhoto" style="background-image: url(' + official.photos + ')"></div>',
-      '<p class="op50">' + official.office + party + '</p>',
-      '<p>' + official.name + '</p>',
-      officialTwitter,
-      '<p class=""><a href="tel:',
-       official.phones[0].replace(/[^A-Z0-9]/ig, "") + '">' + official.phones,
-       '</a></p>',
-      officialEmail,
+    '<div class="OfficialSingle">',
+      '<div class="officialPhoto OfficialPhoto" style="background-image: url(' + official.photos + ')"></div>',
+      '<div class="OfficialInfo">',
+        '<p class="op50 OfficialOffice">' + official.office + party + '</p>',
+        '<p class="OfficialName">' + official.name + '</p>',
+        officialTwitter,
+        '<p><a href="tel:',
+         official.phones[0].replace(/[^A-Z0-9]/ig, "") + '">' + official.phones,
+         '</a></p>',
+        officialEmail,
+        '<p class="OfficialSite">Official site</p>',
+      '</div>',
     '</div>',
+    // '<div class="OfficialDivider class="pt4 pb4></div>',
   ].join('\n');
-  $(".OverlayContent").append(person);
+  $(".OfficialRoster").append(person);
 };
