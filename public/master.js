@@ -276,12 +276,12 @@ $('#zipForm').submit(function(e) {
     openOverlay();
     e.preventDefault();
     // validate the field has 5 characters AND those are all digits
-    if ( $("input:first").val().length !== 5 ) {
+    if ( $(".InputZip").val().length !== 5 ) {
       displaySnackbar("Sorry, we need a 5 digit zip code.", "error");
     }
     // otherwise, go get officials
     getOfficials(
-      $("input:first").val(),
+      $(".InputZip").val(),
       [
         "legislatorUpperBody", // Senate
         "legislatorLowerBody", // House
@@ -300,12 +300,13 @@ function getOfficials(zip, roles) {
       var role = value;
       _.forEach(result.officials, function(value, key) {
         if (value.roles == role) {
-          officialsSorted['officials'].push(value)
+          officialsSorted['officials'].push(value);
         }
       });
     });
-    $("#officialList").html("");
+    $(".OfficialRoster").html("");
     for (i = 0; i < officialsSorted.officials.length; i++) {
+      console.log("getting an official");
       printOfficial(officialsSorted.officials[i]);
     }
     var w = $(".officialSingle").outerWidth(true);
