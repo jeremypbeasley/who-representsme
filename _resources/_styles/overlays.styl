@@ -25,23 +25,9 @@
   opacity: 1;
   //transform: translateX(0px);
 }
-.OverlayClose {
-  position: fixed;
-  top: 8px;
-  right: 8px;
-  height: 32px;
-  width: 32px;
-  background: url(_img/close.svg) no-repeat;
-  background-size: 24px;
-  background-position: center center;
-  border-radius: 10000px;
-  border: none;
-  outline: none;
-  text-indent: -999999px;
-  opacity: .5;
-}
 .OverlayContent {
   margin: 3rem 0 0 0;
+  padding-bottom: 6rem;
 }
   @media laptop {
     .OverlayContent {
@@ -72,7 +58,7 @@
 .OfficialRoster {
    display: flex;
    flex-direction: column;
-   margin: 3rem 1rem 1rem 1rem;
+   margin: unit3 unit1 unit6 unit1;
    justify-content: center;
  }
   @media laptop {
@@ -85,13 +71,13 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 1rem 0;
+  margin: unit2 0;
 }
 .OfficialPhoto {
   filter: grayscale(100%);
-  width: 165px;
-  height: 165px;
-  margin: 0 3rem 0 3rem;
+  width: 35%;
+  height: 35%;
+  margin: 0 unit2 0 unit2;
 }
   @media laptop {
     .OfficialPhoto {
@@ -100,7 +86,8 @@
     }
   }
 .OfficialInfo {
-  width: 13rem;
+  //width: 13rem;
+  margin-right: unit2
 }
 .OfficialOffice {
   margin: 0 0 1rem 0;
@@ -120,8 +107,8 @@
 
 .OverlayCityContainer {
   position: relative;
-  width: 93%;
-  margin: 0 1rem;
+  width: calc(100% - unit6);
+  margin: unit3;
   height: 3rem;
   border-bottom: 1px solid #000;
   font-size: 1.3rem;
@@ -144,9 +131,9 @@
     }
   }
 .OverlayClose {
-  position: relative;
-  top: -2.4rem;
-  right: -4.5rem;
+  position: absolute;
+  top: 16px;
+  right: 16px;
   height: 32px;
   width: 32px;
   background: url(_img/close.svg) no-repeat;
@@ -171,3 +158,39 @@
       font-size: 1.3rem;
     }
   }
+
+// SHARE THIS MODULE
+
+.ShareContainer {
+  border: 1px solid #FF3700;
+  border-radius: 5px;
+  width: 89%;
+  max-width: 34rem;
+  margin: 2rem;
+}
+// overrides mobile safari input styling
+input {
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+}
+.InputShare {
+  border-radius: 0;
+  border: none;
+  height: 2.9rem;
+  width: 24rem;
+  margin: 0 0 0 .5rem;
+  border-right: 1px solid #FF3700;
+  background: transparent;
+  font-size: 1.4rem;
+  color: #888;
+  webkit-appearance: none;
+}
+.BtnShare {
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  font-size: 1.4rem;
+  color: #FF3700;
+  padding: 0 1rem;
+}

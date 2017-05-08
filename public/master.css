@@ -79,7 +79,7 @@ h6 {
   position: relative;
   cursor: default;
 }
-h1 {
+.HeadingLarge {
   font-family: 'Iowanoldstyle', serif;
   font-size: 3rem;
   margin: 7rem 4rem 0 4rem;
@@ -87,14 +87,18 @@ h1 {
   width: 75%;
 }
 @media (min-width: 62em) {
-  h1 {
+  .HeadingLarge {
     width: 60%;
     font-size: 6rem;
   }
 }
-h2 {
+.HeadingMedium {
   font-size: 2.6rem;
   font-family: 'Iowanoldstyle', serif;
+}
+.HeadingSmall {
+  font-family: 'CircularStdBold', sans-serif;
+  font-size: 2rem;
 }
 .Caption {
   font-size: 1.1rem;
@@ -692,23 +696,9 @@ label.error {
 .Overlay.Active {
   opacity: 1;
 }
-.OverlayClose {
-  position: fixed;
-  top: 8px;
-  right: 8px;
-  height: 32px;
-  width: 32px;
-  background: url("_img/close.svg") no-repeat;
-  background-size: 24px;
-  background-position: center center;
-  border-radius: 10000px;
-  border: none;
-  outline: none;
-  text-indent: -999999px;
-  opacity: 0.5;
-}
 .OverlayContent {
   margin: 3rem 0 0 0;
+  padding-bottom: 6rem;
 }
 @media (min-width: 62em) {
   .OverlayContent {
@@ -737,7 +727,7 @@ label.error {
 .OfficialRoster {
   display: flex;
   flex-direction: column;
-  margin: 3rem 1rem 1rem 1rem;
+  margin: 24px 8px 48px 8px;
   justify-content: center;
 }
 @media (min-width: 62em) {
@@ -750,13 +740,13 @@ label.error {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 1rem 0;
+  margin: 16px 0;
 }
 .OfficialPhoto {
   filter: grayscale(100%);
-  width: 165px;
-  height: 165px;
-  margin: 0 3rem 0 3rem;
+  width: 35%;
+  height: 35%;
+  margin: 0 16px 0 16px;
 }
 @media (min-width: 62em) {
   .OfficialPhoto {
@@ -765,7 +755,7 @@ label.error {
   }
 }
 .OfficialInfo {
-  width: 13rem;
+  margin-right: 16px;
 }
 .OfficialOffice {
   margin: 0 0 1rem 0;
@@ -778,8 +768,8 @@ label.error {
 }
 .OverlayCityContainer {
   position: relative;
-  width: 93%;
-  margin: 0 1rem;
+  width: calc(100% - unit6);
+  margin: 24px;
   height: 3rem;
   border-bottom: 1px solid #000;
   font-size: 1.3rem;
@@ -802,9 +792,9 @@ label.error {
   }
 }
 .OverlayClose {
-  position: relative;
-  top: -2.4rem;
-  right: -4.5rem;
+  position: absolute;
+  top: 16px;
+  right: 16px;
   height: 32px;
   width: 32px;
   background: url("_img/close.svg") no-repeat;
@@ -828,6 +818,38 @@ label.error {
     width: 13.4rem;
     font-size: 1.3rem;
   }
+}
+.ShareContainer {
+  border: 1px solid #ff3700;
+  border-radius: 5px;
+  width: 89%;
+  max-width: 34rem;
+  margin: 2rem;
+}
+input {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.InputShare {
+  border-radius: 0;
+  border: none;
+  height: 2.9rem;
+  width: 24rem;
+  margin: 0 0 0 0.5rem;
+  border-right: 1px solid #ff3700;
+  background: transparent;
+  font-size: 1.4rem;
+  color: #888;
+  webkit-appearance: none;
+}
+.BtnShare {
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  font-size: 1.4rem;
+  color: #ff3700;
+  padding: 0 1rem;
 }
 .HeroImgContainer {
   background: url("_img/people_only.png");
@@ -939,36 +961,4 @@ label {
     right: 20rem;
     top: -2rem;
   }
-}
-.ShareContainer {
-  border: 1px solid #ff3700;
-  border-radius: 5px;
-  width: 89%;
-  max-width: 34rem;
-  margin: 2rem;
-}
-input {
-  -webkit-appearance: none;
-  -webkit-border-radius: 0;
-  border-radius: 0;
-}
-.InputShare {
-  border-radius: 0;
-  border: none;
-  height: 2.9rem;
-  width: 24rem;
-  margin: 0 0 0 0.5rem;
-  border-right: 1px solid #ff3700;
-  background: transparent;
-  font-size: 1.4rem;
-  color: #888;
-  webkit-appearance: none;
-}
-.BtnShare {
-  border: none;
-  border-radius: 0;
-  background: transparent;
-  font-size: 1.4rem;
-  color: #ff3700;
-  padding: 0 1rem;
 }
