@@ -70,14 +70,14 @@
 .OfficialSingle {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  margin: unit2 0;
+  margin: unit5 0;
+  justify-content: center;
 }
 .OfficialPhoto {
   filter: grayscale(100%);
   width: 35%;
   height: 35%;
-  margin: 0 unit2 0 unit2;
+  margin: 0 unit4 0 unit2;
 }
   @media laptop {
     .OfficialPhoto {
@@ -86,7 +86,7 @@
     }
   }
 .OfficialInfo {
-  //width: 13rem;
+  // width: 13rem;
   margin-right: unit2
 }
 .OfficialOffice {
@@ -115,13 +115,14 @@
   width: calc(100% - unit6);
   margin: unit3;
   height: 3rem;
-  // border-bottom: 1px solid #000;
+  border-bottom: 1px solid #000;
   font-size: 1.3rem;
 }
   @media laptop {
     .OverlayCityContainer {
       width: 40%;
       left: 7rem;
+      border-bottom: none;
     }
 }
 .OverlayCityClear {
@@ -150,7 +151,12 @@
   text-indent: -99999px;
 }
 .MissingSomeone {
-  display: none;
+  border-bottom: 1px solid #000;
+  width: 13.4rem;
+  font-size: 1.3rem;
+  margin: 0 0 0 unit3;
+  position: relative;
+  top: 3rem;
 }
   @media laptop {
     .MissingSomeone {
@@ -158,9 +164,6 @@
       position: relative;
       top: -2rem;
       left: 70%;
-      border-bottom: 1px solid #000;
-      width: 13.4rem;
-      font-size: 1.3rem;
     }
   }
 

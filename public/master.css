@@ -739,14 +739,14 @@ label.error {
 .OfficialSingle {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  margin: 16px 0;
+  margin: 40px 0;
+  justify-content: center;
 }
 .OfficialPhoto {
   filter: grayscale(100%);
   width: 35%;
   height: 35%;
-  margin: 0 16px 0 16px;
+  margin: 0 32px 0 16px;
 }
 @media (min-width: 62em) {
   .OfficialPhoto {
@@ -780,12 +780,14 @@ label.error {
   width: calc(100% - unit6);
   margin: 24px;
   height: 3rem;
+  border-bottom: 1px solid #000;
   font-size: 1.3rem;
 }
 @media (min-width: 62em) {
   .OverlayCityContainer {
     width: 40%;
     left: 7rem;
+    border-bottom: none;
   }
 }
 .OverlayCityClear {
@@ -814,7 +816,12 @@ label.error {
   text-indent: -99999px;
 }
 .MissingSomeone {
-  display: none;
+  border-bottom: 1px solid #000;
+  width: 13.4rem;
+  font-size: 1.3rem;
+  margin: 0 0 0 24px;
+  position: relative;
+  top: 3rem;
 }
 @media (min-width: 62em) {
   .MissingSomeone {
@@ -822,9 +829,6 @@ label.error {
     position: relative;
     top: -2rem;
     left: 70%;
-    border-bottom: 1px solid #000;
-    width: 13.4rem;
-    font-size: 1.3rem;
   }
 }
 .ShareContainer {
