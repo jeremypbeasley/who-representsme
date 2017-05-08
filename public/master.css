@@ -760,6 +760,10 @@ label.error {
 .OfficialOffice {
   margin: 0 0 1rem 0;
 }
+.OfficialName {
+  word-wrap: break-word;
+  width: 13rem;
+}
 .OfficialDivider {
   width: 90%;
   border-bottom: 1px solid #ccc;
