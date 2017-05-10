@@ -65,6 +65,7 @@
      .OfficialRoster {
        flex-direction: row;
        flex-wrap: wrap;
+       margin-bottom: unit4;
      }
    }
 .OfficialSingle {
@@ -150,10 +151,12 @@
   text-indent: -99999px;
 }
   @media laptop {
-    position: relative;
-    top: 8rem;
-    left: 46%;
-    opacity: .5;
+    .OverlayClose {
+      position: relative;
+      top: 5rem;
+      left: 46%;
+      opacity: .5;
+    }
   }
 .MissingSomeone {
   border-bottom: 1px solid #000;
@@ -167,11 +170,21 @@
     .MissingSomeone {
       display: block;
       position: relative;
-      top: -87rem;
-      left: 733vw;
+      top: -68rem;
+      left: 34vw;
     }
   }
-
+.RosterBottomDivider {
+  display: none;
+}
+  @media laptop {
+    .RosterBottomDivider {
+      display: block;
+      border-bottom: 1px solid #000;
+      width: 85%;
+      margin: 0 auto;
+    }
+  }
 // SHARE THIS MODULE
 
 .ShareContainer {

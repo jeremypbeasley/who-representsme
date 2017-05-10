@@ -734,6 +734,7 @@ label.error {
   .OfficialRoster {
     flex-direction: row;
     flex-wrap: wrap;
+    margin-bottom: 32px;
   }
 }
 .OfficialSingle {
@@ -786,8 +787,7 @@ label.error {
 @media (min-width: 62em) {
   .OverlayCityContainer {
     width: 40%;
-    left: 7rem;
-    border-bottom: none;
+    left: 4rem;
   }
 }
 .OverlayCityClear {
@@ -815,6 +815,14 @@ label.error {
   outline: none;
   text-indent: -99999px;
 }
+@media (min-width: 62em) {
+  .OverlayClose {
+    position: relative;
+    top: 5rem;
+    left: 46%;
+    opacity: 0.5;
+  }
+}
 .MissingSomeone {
   border-bottom: 1px solid #000;
   width: 13.4rem;
@@ -827,8 +835,19 @@ label.error {
   .MissingSomeone {
     display: block;
     position: relative;
-    top: -2rem;
-    left: 70%;
+    top: -68rem;
+    left: 34vw;
+  }
+}
+.RosterBottomDivider {
+  display: none;
+}
+@media (min-width: 62em) {
+  .RosterBottomDivider {
+    display: block;
+    border-bottom: 1px solid #000;
+    width: 85%;
+    margin: 0 auto;
   }
 }
 .ShareContainer {
