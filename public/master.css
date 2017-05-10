@@ -84,7 +84,7 @@ h6 {
   font-size: 3rem;
   margin: 7rem 4rem 0 4rem;
   font-size: 4rem;
-  width: 75%;
+  width: 50%;
 }
 @media (min-width: 62em) {
   .HeadingLarge {
@@ -887,6 +887,15 @@ input {
   color: #ff3700;
   padding: 0 1rem;
 }
+.OverlaySiteCredit {
+  margin: 6rem 0 2rem 3rem;
+  font-size: 1.3rem;
+}
+@media (min-width: 62em) {
+  .OverlaySiteCredit {
+    margin-left: 6rem;
+  }
+}
 .HeroImgContainer {
   background: url("_img/people_only.png");
   background-repeat: no-repeat;
@@ -915,7 +924,7 @@ input {
     width: 50%;
     position: relative;
     float: right;
-    padding: 0 0 0 11rem;
+    padding: 0 0 0 3vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -970,13 +979,8 @@ label {
   }
 }
 .SiteCredit {
-  margin: 6rem 0 2rem 3rem;
   font-size: 1.3rem;
-}
-@media (min-width: 62em) {
-  .SiteCredit {
-    margin-left: 6rem;
-  }
+  margin: 17% 0 0 4rem;
 }
 .BorderBottomBlack {
   border-bottom: 1px solid #000;
