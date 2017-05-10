@@ -970,11 +970,11 @@ label {
   }
 }
 .SiteCredit {
-  margin: 6rem 14rem 0 4rem;
+  margin: 6rem 14rem 0 6rem;
   width: 50%;
 }
 @media (min-width: 62em) {
-  .BuiltBy {
+  .SiteCredit {
     width: 75%;
   }
 }
@@ -988,13 +988,10 @@ label {
   text-align: center;
   background-position: center center;
   position: relative;
-  float: right;
-  top: -4rem;
-  right: 3rem;
 }
 @media (min-width: 62em) {
   .ImgGitHub {
-    right: 20rem;
-    top: -2rem;
+    top: 3px;
+    margin: 0 0 0 2rem;
   }
 }
