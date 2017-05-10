@@ -842,6 +842,9 @@ label.error {
     margin: 0 auto;
   }
 }
+.ShareContainer {
+  margin: 0 0 0 32px;
+}
 @media (min-width: 62em) {
   .ShareContainer {
     margin: 56px 0 0 56px;
@@ -852,7 +855,7 @@ label.error {
   border-radius: 5px;
   width: 89%;
   max-width: 34rem;
-  margin: 2rem;
+  margin: 2rem 0 0 0;
 }
 @media (min-width: 62em) {
   .ShareModule {
@@ -868,7 +871,7 @@ input {
   border-radius: 0;
   border: none;
   height: 2.9rem;
-  width: 24rem;
+  width: 69%;
   margin: 0 0 0 0.5rem;
   border-right: 1px solid #ff3700;
   background: transparent;
