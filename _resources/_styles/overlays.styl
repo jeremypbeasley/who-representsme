@@ -159,20 +159,12 @@
     }
   }
 .MissingSomeone {
-  border-bottom: 1px solid #000;
-  width: 13.4rem;
-  font-size: 1.3rem;
-  margin: 0 0 0 unit3;
-  position: relative;
-  top: 3rem;
-}
-  @media laptop {
-    .MissingSomeone {
-      display: block;
-      position: relative;
-      top: -68rem;
-      left: 34vw;
-    }
+    border-bottom: 1px solid #000;
+    width: 13.4rem;
+    font-size: 1.3rem;
+    margin: unti7 0 0 unit3;
+    position: relative;
+    top: 3rem;
   }
 .RosterBottomDivider {
   display: none;
@@ -185,14 +177,25 @@
       margin: 0 auto;
     }
   }
+
 // SHARE THIS MODULE
 
-.ShareContainer {
+@media laptop {
+  .ShareContainer {
+    margin: unit7 0 0 unit7;
+  }
+}
+.ShareModule {
   border: 1px solid #FF3700;
   border-radius: 5px;
   width: 89%;
   max-width: 34rem;
   margin: 2rem;
+}
+@media laptop {
+  .ShareModule {
+    margin: 2rem 0 0 0;
+  }
 }
 // overrides mobile safari input styling
 input {

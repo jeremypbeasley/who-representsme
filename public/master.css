@@ -827,17 +827,9 @@ label.error {
   border-bottom: 1px solid #000;
   width: 13.4rem;
   font-size: 1.3rem;
-  margin: 0 0 0 24px;
+  margin: unti7 0 0 24px;
   position: relative;
   top: 3rem;
-}
-@media (min-width: 62em) {
-  .MissingSomeone {
-    display: block;
-    position: relative;
-    top: -68rem;
-    left: 34vw;
-  }
 }
 .RosterBottomDivider {
   display: none;
@@ -850,12 +842,22 @@ label.error {
     margin: 0 auto;
   }
 }
-.ShareContainer {
+@media (min-width: 62em) {
+  .ShareContainer {
+    margin: 56px 0 0 56px;
+  }
+}
+.ShareModule {
   border: 1px solid #ff3700;
   border-radius: 5px;
   width: 89%;
   max-width: 34rem;
   margin: 2rem;
+}
+@media (min-width: 62em) {
+  .ShareModule {
+    margin: 2rem 0 0 0;
+  }
 }
 input {
   -webkit-appearance: none;
