@@ -627,10 +627,15 @@ label.error {
   background-image: linear-gradient(101deg, #ff6100, #ff000d 47%, #500072);
   background-color: #000;
   bottom: 0;
-  left: 50%;
+  left: 0;
   z-index: 9999;
   transform: translateY(60px);
   transition: all 200ms ease-out;
+}
+@media (min-width: 62em) {
+  .Snackbar {
+    left: 50%;
+  }
 }
 .Snackbar span {
   padding: 21px 16px;
