@@ -900,6 +900,20 @@ input {
     margin-left: 6rem;
   }
 }
+.OverlayImgGitHub {
+  height: 18px;
+  width: 18px;
+  text-align: center;
+  background-position: center center;
+  position: relative;
+  top: 5px;
+  left: 2rem;
+}
+@media (min-width: 62em) {
+  .OverlayImgGitHub {
+    margin: 0 0 0 29rem;
+  }
+}
 .HeroImgContainer {
   background: url("_img/people_only.png");
   background-repeat: no-repeat;
@@ -1001,6 +1015,6 @@ label {
 }
 @media (min-width: 62em) {
   .ImgGitHub {
-    margin: 0 0 0 2rem;
+    margin: 0 0 0 26rem;
   }
 }
