@@ -26,14 +26,14 @@
   //transform: translateX(0px);
 }
 .OverlayContent {
-  margin: 3rem 0 0 0;
-  padding-bottom: 6rem;
+  margin: unit4 0 0 0;
+  padding-bottom: unit7;
 }
-  @media laptop {
-    .OverlayContent {
-      margin: 5.5rem 0 0 0;
-    }
+@media laptop {
+  .OverlayContent {
+    margin: unit7 0 0 0;
   }
+}
 @media laptop {
   .OverlayScrim {
     position: absolute;
@@ -58,35 +58,54 @@
 .OfficialRoster {
    display: flex;
    flex-direction: column;
-   margin: unit3 unit2 0 unit2;
+   margin: unit3 unit3 unit3 unit3;
    justify-content: flex-start;
+   padding-bottom: unit3;
+   border-bottom: 1px solid black;
  }
 @media laptop {
-   .OfficialRoster {
-     flex-direction: row;
-     margin: unit3 unit6 0 unit6;
-     flex-wrap: wrap;
-   }
- }
+  .OfficialRoster {
+    flex-direction: row;
+    padding-bottom: 0;
+    margin: unit3 unit6 0 unit8;
+    flex-wrap: wrap;
+  }
+}
 .OfficialSingle {
   display: flex;
   flex-direction: row;
-  margin: 0;
+  margin: unit2 0;
+  width: 100%;
   justify-content: flex-start;
+}
+@media tablet {
+  .OfficialSingle {
+    width: 50%;
+  }
 }
 @media laptop {
   .OfficialSingle {
-    width: 50%;
+    width: 100%;
     margin: 0 0 unit6 0;
+  }
+}
+@media desktop {
+  .OfficialSingle {
+    width: 50%;
+  }
+}
+@media desktop {
+  .OfficialInfo {
+    margin-right: unit2;
   }
 }
 .OfficialPhoto {
   width: 45%;
-  margin: 0 unit3 0 unit1;
+  margin: 0 unit3 0 0;
 }
 @media laptop {
   .OfficialPhoto {
-    margin: 0 unit3 0 unit2;
+    margin: 0 unit3 0 0;
   }
 }
 .OfficialPhoto div {
@@ -99,8 +118,6 @@
   background-color: black;
   background-position: top center;
 }
-.OfficialInfo {
-}
 .OfficialOffice {
   margin: 0 0 1rem 0;
 }
@@ -111,46 +128,34 @@
 .OfficialDivider {
   width: calc(100% - unit2);
   border-bottom: 1px solid #ccc;
-  margin: unit3 unit1;
+  margin: unit3 0;
   height: 0px;
 }
-  @media laptop {
-    .OfficialDivider {
-      display: none;
-      margin: unit8;
-    }
-  }
-
-// CITY AND STATE HEADING
-
-.OverlayCityContainer {
-  position: relative;
-  width: 90%;
-  margin: unit3;
-  font-size: 1.3rem;
-}
 @media laptop {
-  .OverlayCityContainer {
+  .OfficialDivider {
+    display: none;
     margin: unit8;
   }
 }
-.OverlayCityClear {
+
+// CITY AND STATE HEADING
+
+.OverlayCity{
   position: relative;
-  top: -2rem;
-  left: 75vw;
+  width: 90%;
+  margin: unit2 unit3 unit3 unit3;
 }
-  @media laptop {
-    .OverlayCityClear {
-      top: -1.8rem;
-      left: 22rem;
-    }
+@media laptop {
+  .OverlayCity {
+    margin: unit8;
   }
+}
 .OverlayClose {
   position: absolute;
-  top: 16px;
-  right: 16px;
-  height: 32px;
-  width: 32px;
+  top: unit0;
+  right: unit0;
+  height: unit6;
+  width: unit6;
   background: url(_img/close.svg) no-repeat;
   background-size: 16px;
   background-position: center center;
@@ -158,40 +163,22 @@
   border: none;
   outline: none;
   text-indent: -99999px;
+  z-index: 9999;
+  cursor: pointer;
 }
-  @media laptop {
-    .OverlayClose {
-      position: relative;
-      top: 5rem;
-      left: 46%;
-      opacity: .5;
-    }
-  }
 .MissingSomeone {
-    border-bottom: 1px solid #000;
-    width: 13.4rem;
-    font-size: 1.3rem;
-    margin: unti7 0 0 unit3;
-    position: relative;
-    top: 3rem;
-  }
-.RosterBottomDivider {
-  display: none;
+  border-bottom: 1px solid #000;
+  width: 13.4rem;
+  font-size: 1.3rem;
+  margin: unti7 0 0 unit3;
+  position: relative;
+  top: 3rem;
 }
-  @media laptop {
-    .RosterBottomDivider {
-      display: block;
-      height: 0px;
-      border-bottom: 1px solid #000;
-      width: calc(100% - unit8 - unit8);
-      margin: 0 unit8 unit8 unit8;
-    }
-  }
 
 // SHARE THIS MODULE
 
 .ShareContainer {
-  margin: 0 0 0 unit4;
+  margin: 0 0 0 unit3;
 }
 @media laptop {
   .ShareContainer {
@@ -240,8 +227,8 @@ input {
   margin: unit8 0 unit8 unit8;
   font-size: 1.3rem;
 }
-  @media laptop {
-    .OverlaySiteCredit {
-      margin-left: 6rem;
-    }
+@media laptop {
+  .OverlaySiteCredit {
+    margin-left: 6rem;
   }
+}

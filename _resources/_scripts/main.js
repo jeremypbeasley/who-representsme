@@ -85,7 +85,7 @@ function printOfficial(official) {
   }
   person = [
     '<div class="OfficialSingle">',
-      '<div class="officialPhoto OfficialPhoto">',
+      '<div class="OfficialPhoto">',
         '<div style="background-image: url(' + official.photos + ')"></div>',
       '</div>',
       '<div class="OfficialInfo">',
@@ -98,7 +98,7 @@ function printOfficial(official) {
         '<p class="OfficialSite">Official site</p>',
       '</div>',
     '</div>',
-    '<div class="OfficialDivider class="pt4 pb4></div>',
+    // '<div class="OfficialDivider class="pt4 pb4></div>',
   ].join('\n');
   $(".OfficialRoster").append(person);
 };

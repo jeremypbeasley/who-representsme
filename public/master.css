@@ -680,12 +680,12 @@ label.error {
   opacity: 1;
 }
 .OverlayContent {
-  margin: 3rem 0 0 0;
-  padding-bottom: 6rem;
+  margin: 32px 0 0 0;
+  padding-bottom: 56px;
 }
 @media (min-width: 62em) {
   .OverlayContent {
-    margin: 5.5rem 0 0 0;
+    margin: 56px 0 0 0;
   }
 }
 @media (min-width: 62em) {
@@ -710,35 +710,54 @@ label.error {
 .OfficialRoster {
   display: flex;
   flex-direction: column;
-  margin: 24px 16px 0 16px;
+  margin: 24px 24px 24px 24px;
   justify-content: flex-start;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #000;
 }
 @media (min-width: 62em) {
   .OfficialRoster {
     flex-direction: row;
-    margin: 24px 48px 0 48px;
+    padding-bottom: 0;
+    margin: 24px 48px 0 64px;
     flex-wrap: wrap;
   }
 }
 .OfficialSingle {
   display: flex;
   flex-direction: row;
-  margin: 0;
+  margin: 16px 0;
+  width: 100%;
   justify-content: flex-start;
+}
+@media (min-width: 48em) {
+  .OfficialSingle {
+    width: 50%;
+  }
 }
 @media (min-width: 62em) {
   .OfficialSingle {
-    width: 50%;
+    width: 100%;
     margin: 0 0 48px 0;
+  }
+}
+@media (min-width: 75em) {
+  .OfficialSingle {
+    width: 50%;
+  }
+}
+@media (min-width: 75em) {
+  .OfficialInfo {
+    margin-right: 16px;
   }
 }
 .OfficialPhoto {
   width: 45%;
-  margin: 0 24px 0 8px;
+  margin: 0 24px 0 0;
 }
 @media (min-width: 62em) {
   .OfficialPhoto {
-    margin: 0 24px 0 16px;
+    margin: 0 24px 0 0;
   }
 }
 .OfficialPhoto div {
@@ -761,7 +780,7 @@ label.error {
 .OfficialDivider {
   width: calc(100% - unit2);
   border-bottom: 1px solid #ccc;
-  margin: 24px 8px;
+  margin: 24px 0;
   height: 0px;
 }
 @media (min-width: 62em) {
@@ -770,34 +789,22 @@ label.error {
     margin: 64px;
   }
 }
-.OverlayCityContainer {
+.OverlayCity {
   position: relative;
   width: 90%;
-  margin: 24px;
-  font-size: 1.3rem;
+  margin: 16px 24px 24px 24px;
 }
 @media (min-width: 62em) {
-  .OverlayCityContainer {
+  .OverlayCity {
     margin: 64px;
-  }
-}
-.OverlayCityClear {
-  position: relative;
-  top: -2rem;
-  left: 75vw;
-}
-@media (min-width: 62em) {
-  .OverlayCityClear {
-    top: -1.8rem;
-    left: 22rem;
   }
 }
 .OverlayClose {
   position: absolute;
-  top: 16px;
-  right: 16px;
-  height: 32px;
-  width: 32px;
+  top: 4px;
+  right: 4px;
+  height: 48px;
+  width: 48px;
   background: url("_img/close.svg") no-repeat;
   background-size: 16px;
   background-position: center center;
@@ -805,14 +812,8 @@ label.error {
   border: none;
   outline: none;
   text-indent: -99999px;
-}
-@media (min-width: 62em) {
-  .OverlayClose {
-    position: relative;
-    top: 5rem;
-    left: 46%;
-    opacity: 0.5;
-  }
+  z-index: 9999;
+  cursor: pointer;
 }
 .MissingSomeone {
   border-bottom: 1px solid #000;
@@ -822,20 +823,8 @@ label.error {
   position: relative;
   top: 3rem;
 }
-.RosterBottomDivider {
-  display: none;
-}
-@media (min-width: 62em) {
-  .RosterBottomDivider {
-    display: block;
-    height: 0px;
-    border-bottom: 1px solid #000;
-    width: calc(100% - unit8 - unit8);
-    margin: 0 64px 64px 64px;
-  }
-}
 .ShareContainer {
-  margin: 0 0 0 32px;
+  margin: 0 0 0 24px;
 }
 @media (min-width: 62em) {
   .ShareContainer {
@@ -906,7 +895,6 @@ input {
 }
 .ContentContainer {
   background: #ff3700;
-  height: 100vh;
   overflow: scroll;
   padding: 24px;
 }
