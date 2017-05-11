@@ -82,7 +82,7 @@ h6 {
 .HeadingLarge {
   font-family: 'Iowanoldstyle', serif;
   font-size: 3rem;
-  margin: 7rem 4rem 0 4rem;
+  margin: 7rem 0 0 0;
   font-size: 4rem;
   width: 50%;
 }
@@ -98,7 +98,7 @@ h6 {
 }
 .HeadingSmall {
   font-family: 'CircularStdBold', sans-serif;
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 .Caption {
   font-size: 1.1rem;
@@ -537,23 +537,6 @@ img {
   cursor: pointer;
   width: 130px;
 }
-.officialPhoto {
-  width: 130px;
-  height: 0px;
-  padding-bottom: 130px;
-  border-radius: 100%;
-  background-size: cover;
-  background-position: center center;
-  background-color: #4facfe;
-  margin-bottom: 2rem;
-  float: left;
-}
-.officialPhoto.Large {
-  width: 223px;
-  padding-bottom: 223px;
-  margin-left: -15%;
-  float: left;
-}
 .officialTitleCard {
   width: 40%;
   float: left;
@@ -727,36 +710,46 @@ label.error {
 .OfficialRoster {
   display: flex;
   flex-direction: column;
-  margin: 24px 8px 48px 8px;
-  justify-content: center;
+  margin: 24px 16px 0 16px;
+  justify-content: flex-start;
 }
 @media (min-width: 62em) {
   .OfficialRoster {
     flex-direction: row;
+    margin: 24px 48px 0 48px;
     flex-wrap: wrap;
-    margin-bottom: 32px;
   }
 }
 .OfficialSingle {
   display: flex;
   flex-direction: row;
-  margin: 40px 0;
-  justify-content: center;
+  margin: 0;
+  justify-content: flex-start;
+}
+@media (min-width: 62em) {
+  .OfficialSingle {
+    width: 50%;
+    margin: 0 0 48px 0;
+  }
 }
 .OfficialPhoto {
-  filter: grayscale(100%);
-  width: 35%;
-  height: 35%;
-  margin: 0 32px 0 16px;
+  width: 45%;
+  margin: 0 24px 0 8px;
 }
 @media (min-width: 62em) {
   .OfficialPhoto {
-    width: 125px;
-    height: 125px;
+    margin: 0 24px 0 16px;
   }
 }
-.OfficialInfo {
-  margin-right: 16px;
+.OfficialPhoto div {
+  filter: grayscale(100%);
+  width: 100%;
+  padding-bottom: 100%;
+  height: 0px;
+  border-radius: 100%;
+  background-size: cover;
+  background-color: #000;
+  background-position: top center;
 }
 .OfficialOffice {
   margin: 0 0 1rem 0;
@@ -766,28 +759,26 @@ label.error {
   width: 13rem;
 }
 .OfficialDivider {
-  width: 90%;
+  width: calc(100% - unit2);
   border-bottom: 1px solid #ccc;
-  margin: 0 auto;
-  height: 1px;
+  margin: 24px 8px;
+  height: 0px;
 }
 @media (min-width: 62em) {
   .OfficialDivider {
     display: none;
+    margin: 64px;
   }
 }
 .OverlayCityContainer {
   position: relative;
-  width: calc(100% - unit6);
+  width: 90%;
   margin: 24px;
-  height: 3rem;
-  border-bottom: 1px solid #000;
   font-size: 1.3rem;
 }
 @media (min-width: 62em) {
   .OverlayCityContainer {
-    width: 40%;
-    left: 4rem;
+    margin: 64px;
   }
 }
 .OverlayCityClear {
@@ -837,9 +828,10 @@ label.error {
 @media (min-width: 62em) {
   .RosterBottomDivider {
     display: block;
+    height: 0px;
     border-bottom: 1px solid #000;
-    width: 85%;
-    margin: 0 auto;
+    width: calc(100% - unit8 - unit8);
+    margin: 0 64px 64px 64px;
   }
 }
 .ShareContainer {
@@ -847,7 +839,7 @@ label.error {
 }
 @media (min-width: 62em) {
   .ShareContainer {
-    margin: 56px 0 0 56px;
+    margin: 64px 0 0 64px;
   }
 }
 .ShareModule {
@@ -888,7 +880,7 @@ input {
   padding: 0 1rem;
 }
 .OverlaySiteCredit {
-  margin: 6rem 0 2rem 3rem;
+  margin: 64px 0 64px 64px;
   font-size: 1.3rem;
 }
 @media (min-width: 62em) {
@@ -916,6 +908,7 @@ input {
   background: #ff3700;
   height: 100vh;
   overflow: scroll;
+  padding: 24px;
 }
 @media (min-width: 62em) {
   .ContentContainer {
@@ -923,7 +916,7 @@ input {
     width: 50%;
     position: relative;
     float: right;
-    padding: 0 0 0 3vw;
+    padding: 64px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -936,21 +929,19 @@ input {
   height: 18px;
   width: 26px;
   position: relative;
-  top: 4rem;
-  left: 4rem;
 }
 label {
   display: block;
-  margin: 4rem 4rem 0 4rem;
+  margin: 0;
   font-size: 1.5rem;
 }
 @media (min-width: 62em) {
   label {
-    margin: 7rem 4rem 0 4rem;
+    margin: 0;
   }
 }
 .InputZip {
-  margin: 0 2rem 0 4rem;
+  margin: 0 2rem 0 0;
   border: none;
   background: #ff3700;
   border-bottom: 1px solid #fff;
@@ -979,7 +970,7 @@ label {
 }
 .SiteCredit {
   font-size: 1.3rem;
-  margin: 17% 0 0 4rem;
+  margin: 17% 0 0 0;
 }
 .BorderBottomBlack {
   border-bottom: 1px solid #000;
