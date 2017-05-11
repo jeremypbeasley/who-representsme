@@ -276,12 +276,12 @@ $('#zipForm').submit(function(e) {
     openOverlay();
     e.preventDefault();
     // validate the field has 5 characters AND those are all digits
-    if ( $("input:first").val().length !== 5 ) {
+    if ( $(".InputZip").val().length !== 5 ) {
       displaySnackbar("Sorry, we need a 5 digit zip code.", "error");
     }
     // otherwise, go get officials
     getOfficials(
-      $("input:first").val(),
+      $(".InputZip").val(),
       [
         "legislatorUpperBody", // Senate
         "legislatorLowerBody", // House
@@ -300,12 +300,13 @@ function getOfficials(zip, roles) {
       var role = value;
       _.forEach(result.officials, function(value, key) {
         if (value.roles == role) {
-          officialsSorted['officials'].push(value)
+          officialsSorted['officials'].push(value);
         }
       });
     });
-    $("#officialList").html("");
+    $(".OfficialRoster").html("");
     for (i = 0; i < officialsSorted.officials.length; i++) {
+      console.log("getting an official");
       printOfficial(officialsSorted.officials[i]);
     }
     var w = $(".officialSingle").outerWidth(true);
@@ -344,16 +345,15 @@ function printOfficial(official) {
       '<div class="officialPhoto OfficialPhoto" style="background-image: url(' + official.photos + ')"></div>',
       '<div class="OfficialInfo">',
         '<p class="op50 OfficialOffice">' + official.office + party + '</p>',
-        '<p class="OfficialName">' + official.name + '</p>',
+        '<h3 class="OfficialName HeadingSmall">' + official.name + '</h3>',
         officialTwitter,
         '<p><a href="tel:',
          official.phones[0].replace(/[^A-Z0-9]/ig, "") + '">' + official.phones,
          '</a></p>',
-        officialEmail,
         '<p class="OfficialSite">Official site</p>',
       '</div>',
     '</div>',
-    // '<div class="OfficialDivider class="pt4 pb4></div>',
+    '<div class="OfficialDivider class="pt4 pb4></div>',
   ].join('\n');
   $(".OfficialRoster").append(person);
 };

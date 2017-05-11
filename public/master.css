@@ -79,22 +79,26 @@ h6 {
   position: relative;
   cursor: default;
 }
-h1 {
+.HeadingLarge {
   font-family: 'Iowanoldstyle', serif;
   font-size: 3rem;
   margin: 7rem 4rem 0 4rem;
   font-size: 4rem;
-  width: 75%;
+  width: 50%;
 }
 @media (min-width: 62em) {
-  h1 {
+  .HeadingLarge {
     width: 60%;
     font-size: 6rem;
   }
 }
-h2 {
+.HeadingMedium {
   font-size: 2.6rem;
   font-family: 'Iowanoldstyle', serif;
+}
+.HeadingSmall {
+  font-family: 'CircularStdBold', sans-serif;
+  font-size: 2rem;
 }
 .Caption {
   font-size: 1.1rem;
@@ -692,23 +696,9 @@ label.error {
 .Overlay.Active {
   opacity: 1;
 }
-.OverlayClose {
-  position: fixed;
-  top: 8px;
-  right: 8px;
-  height: 32px;
-  width: 32px;
-  background: url("_img/close.svg") no-repeat;
-  background-size: 24px;
-  background-position: center center;
-  border-radius: 10000px;
-  border: none;
-  outline: none;
-  text-indent: -999999px;
-  opacity: 0.5;
-}
 .OverlayContent {
   margin: 3rem 0 0 0;
+  padding-bottom: 6rem;
 }
 @media (min-width: 62em) {
   .OverlayContent {
@@ -737,26 +727,27 @@ label.error {
 .OfficialRoster {
   display: flex;
   flex-direction: column;
-  margin: 3rem 1rem 1rem 1rem;
+  margin: 24px 8px 48px 8px;
   justify-content: center;
 }
 @media (min-width: 62em) {
   .OfficialRoster {
     flex-direction: row;
     flex-wrap: wrap;
+    margin-bottom: 32px;
   }
 }
 .OfficialSingle {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  margin: 1rem 0;
+  margin: 40px 0;
+  justify-content: center;
 }
 .OfficialPhoto {
   filter: grayscale(100%);
-  width: 165px;
-  height: 165px;
-  margin: 0 3rem 0 3rem;
+  width: 35%;
+  height: 35%;
+  margin: 0 32px 0 16px;
 }
 @media (min-width: 62em) {
   .OfficialPhoto {
@@ -765,10 +756,14 @@ label.error {
   }
 }
 .OfficialInfo {
-  width: 13rem;
+  margin-right: 16px;
 }
 .OfficialOffice {
   margin: 0 0 1rem 0;
+}
+.OfficialName {
+  word-wrap: break-word;
+  width: 13rem;
 }
 .OfficialDivider {
   width: 90%;
@@ -776,10 +771,15 @@ label.error {
   margin: 0 auto;
   height: 1px;
 }
+@media (min-width: 62em) {
+  .OfficialDivider {
+    display: none;
+  }
+}
 .OverlayCityContainer {
   position: relative;
-  width: 93%;
-  margin: 0 1rem;
+  width: calc(100% - unit6);
+  margin: 24px;
   height: 3rem;
   border-bottom: 1px solid #000;
   font-size: 1.3rem;
@@ -787,7 +787,7 @@ label.error {
 @media (min-width: 62em) {
   .OverlayCityContainer {
     width: 40%;
-    left: 7rem;
+    left: 4rem;
   }
 }
 .OverlayCityClear {
@@ -802,9 +802,9 @@ label.error {
   }
 }
 .OverlayClose {
-  position: relative;
-  top: -2.4rem;
-  right: -4.5rem;
+  position: absolute;
+  top: 16px;
+  right: 16px;
   height: 32px;
   width: 32px;
   background: url("_img/close.svg") no-repeat;
@@ -815,18 +815,85 @@ label.error {
   outline: none;
   text-indent: -99999px;
 }
+@media (min-width: 62em) {
+  .OverlayClose {
+    position: relative;
+    top: 5rem;
+    left: 46%;
+    opacity: 0.5;
+  }
+}
 .MissingSomeone {
+  border-bottom: 1px solid #000;
+  width: 13.4rem;
+  font-size: 1.3rem;
+  margin: unti7 0 0 24px;
+  position: relative;
+  top: 3rem;
+}
+.RosterBottomDivider {
   display: none;
 }
 @media (min-width: 62em) {
-  .MissingSomeone {
+  .RosterBottomDivider {
     display: block;
-    position: relative;
-    top: -2rem;
-    left: 70%;
     border-bottom: 1px solid #000;
-    width: 13.4rem;
-    font-size: 1.3rem;
+    width: 85%;
+    margin: 0 auto;
+  }
+}
+.ShareContainer {
+  margin: 0 0 0 32px;
+}
+@media (min-width: 62em) {
+  .ShareContainer {
+    margin: 56px 0 0 56px;
+  }
+}
+.ShareModule {
+  border: 1px solid #ff3700;
+  border-radius: 5px;
+  width: 89%;
+  max-width: 34rem;
+  margin: 2rem 0 0 0;
+}
+@media (min-width: 62em) {
+  .ShareModule {
+    margin: 2rem 0 0 0;
+  }
+}
+input {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+.InputShare {
+  border-radius: 0;
+  border: none;
+  height: 2.9rem;
+  width: 69%;
+  margin: 0 0 0 0.5rem;
+  border-right: 1px solid #ff3700;
+  background: transparent;
+  font-size: 1.4rem;
+  color: #888;
+  webkit-appearance: none;
+}
+.BtnShare {
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  font-size: 1.4rem;
+  color: #ff3700;
+  padding: 0 1rem;
+}
+.OverlaySiteCredit {
+  margin: 6rem 0 2rem 3rem;
+  font-size: 1.3rem;
+}
+@media (min-width: 62em) {
+  .OverlaySiteCredit {
+    margin-left: 6rem;
   }
 }
 .HeroImgContainer {
@@ -857,7 +924,7 @@ label.error {
     width: 50%;
     position: relative;
     float: right;
-    padding: 0 0 0 11rem;
+    padding: 0 0 0 3vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -912,13 +979,8 @@ label {
   }
 }
 .SiteCredit {
-  margin: 6rem 14rem 0 4rem;
-  width: 50%;
-}
-@media (min-width: 62em) {
-  .BuiltBy {
-    width: 75%;
-  }
+  font-size: 1.3rem;
+  margin: 17% 0 0 4rem;
 }
 .BorderBottomBlack {
   border-bottom: 1px solid #000;
@@ -930,45 +992,11 @@ label {
   text-align: center;
   background-position: center center;
   position: relative;
-  float: right;
-  top: -4rem;
-  right: 3rem;
+  top: 5px;
+  left: 2rem;
 }
 @media (min-width: 62em) {
   .ImgGitHub {
-    right: 20rem;
-    top: -2rem;
+    margin: 0 0 0 2rem;
   }
-}
-.ShareContainer {
-  border: 1px solid #ff3700;
-  border-radius: 5px;
-  width: 89%;
-  max-width: 34rem;
-  margin: 2rem;
-}
-input {
-  -webkit-appearance: none;
-  -webkit-border-radius: 0;
-  border-radius: 0;
-}
-.InputShare {
-  border-radius: 0;
-  border: none;
-  height: 2.9rem;
-  width: 24rem;
-  margin: 0 0 0 0.5rem;
-  border-right: 1px solid #ff3700;
-  background: transparent;
-  font-size: 1.4rem;
-  color: #888;
-  webkit-appearance: none;
-}
-.BtnShare {
-  border: none;
-  border-radius: 0;
-  background: transparent;
-  font-size: 1.4rem;
-  color: #ff3700;
-  padding: 0 1rem;
 }

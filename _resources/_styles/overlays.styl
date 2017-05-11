@@ -25,23 +25,9 @@
   opacity: 1;
   //transform: translateX(0px);
 }
-.OverlayClose {
-  position: fixed;
-  top: 8px;
-  right: 8px;
-  height: 32px;
-  width: 32px;
-  background: url(_img/close.svg) no-repeat;
-  background-size: 24px;
-  background-position: center center;
-  border-radius: 10000px;
-  border: none;
-  outline: none;
-  text-indent: -999999px;
-  opacity: .5;
-}
 .OverlayContent {
   margin: 3rem 0 0 0;
+  padding-bottom: 6rem;
 }
   @media laptop {
     .OverlayContent {
@@ -72,26 +58,27 @@
 .OfficialRoster {
    display: flex;
    flex-direction: column;
-   margin: 3rem 1rem 1rem 1rem;
+   margin: unit3 unit1 unit6 unit1;
    justify-content: center;
  }
   @media laptop {
      .OfficialRoster {
        flex-direction: row;
        flex-wrap: wrap;
+       margin-bottom: unit4;
      }
    }
 .OfficialSingle {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  margin: 1rem 0;
+  margin: unit5 0;
+  justify-content: center;
 }
 .OfficialPhoto {
   filter: grayscale(100%);
-  width: 165px;
-  height: 165px;
-  margin: 0 3rem 0 3rem;
+  width: 35%;
+  height: 35%;
+  margin: 0 unit4 0 unit2;
 }
   @media laptop {
     .OfficialPhoto {
@@ -100,28 +87,34 @@
     }
   }
 .OfficialInfo {
-  width: 13rem;
+  // width: 13rem;
+  margin-right: unit2
 }
 .OfficialOffice {
   margin: 0 0 1rem 0;
 }
-// .OfficialName {
-//   font-weight: bold;
-//   font-size: 2rem;
-// }
+.OfficialName {
+  word-wrap: break-word;
+  width: 13rem;
+}
 .OfficialDivider {
   width: 90%;
   border-bottom: 1px solid #ccc;
   margin: 0 auto;
   height: 1px;
 }
+  @media laptop {
+    .OfficialDivider {
+      display: none;
+    }
+  }
 
 // CITY AND STATE HEADING
 
 .OverlayCityContainer {
   position: relative;
-  width: 93%;
-  margin: 0 1rem;
+  width: calc(100% - unit6);
+  margin: unit3;
   height: 3rem;
   border-bottom: 1px solid #000;
   font-size: 1.3rem;
@@ -129,7 +122,7 @@
   @media laptop {
     .OverlayCityContainer {
       width: 40%;
-      left: 7rem;
+      left: 4rem;
     }
 }
 .OverlayCityClear {
@@ -144,9 +137,9 @@
     }
   }
 .OverlayClose {
-  position: relative;
-  top: -2.4rem;
-  right: -4.5rem;
+  position: absolute;
+  top: 16px;
+  right: 16px;
   height: 32px;
   width: 32px;
   background: url(_img/close.svg) no-repeat;
@@ -157,17 +150,88 @@
   outline: none;
   text-indent: -99999px;
 }
+  @media laptop {
+    .OverlayClose {
+      position: relative;
+      top: 5rem;
+      left: 46%;
+      opacity: .5;
+    }
+  }
 .MissingSomeone {
+    border-bottom: 1px solid #000;
+    width: 13.4rem;
+    font-size: 1.3rem;
+    margin: unti7 0 0 unit3;
+    position: relative;
+    top: 3rem;
+  }
+.RosterBottomDivider {
   display: none;
 }
   @media laptop {
-    .MissingSomeone {
+    .RosterBottomDivider {
       display: block;
-      position: relative;
-      top: -2rem;
-      left: 70%;
       border-bottom: 1px solid #000;
-      width: 13.4rem;
-      font-size: 1.3rem;
+      width: 85%;
+      margin: 0 auto;
+    }
+  }
+
+// SHARE THIS MODULE
+
+.ShareContainer {
+  margin: 0 0 0 unit4;
+}
+@media laptop {
+  .ShareContainer {
+    margin: unit7 0 0 unit7;
+  }
+}
+.ShareModule {
+  border: 1px solid #FF3700;
+  border-radius: 5px;
+  width: 89%;
+  max-width: 34rem;
+  margin: 2rem 0 0 0;
+}
+@media laptop {
+  .ShareModule {
+    margin: 2rem 0 0 0;
+  }
+}
+// overrides mobile safari input styling
+input {
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+}
+.InputShare {
+  border-radius: 0;
+  border: none;
+  height: 2.9rem;
+  width: 69%;
+  margin: 0 0 0 .5rem;
+  border-right: 1px solid #FF3700;
+  background: transparent;
+  font-size: 1.4rem;
+  color: #888;
+  webkit-appearance: none;
+}
+.BtnShare {
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  font-size: 1.4rem;
+  color: #FF3700;
+  padding: 0 1rem;
+}
+.OverlaySiteCredit {
+  margin: 6rem 0 2rem 3rem;
+  font-size: 1.3rem;
+}
+  @media laptop {
+    .OverlaySiteCredit {
+      margin-left: 6rem;
     }
   }
