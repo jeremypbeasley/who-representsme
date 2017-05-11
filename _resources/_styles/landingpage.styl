@@ -1,14 +1,13 @@
 .HeroImgContainer {
-  background: url(_img/people_only.png);
+  background: url(_img/flag.jpg);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   height: 35vh;
   width: 100%;
 }
 @media laptop {
   .HeroImgContainer {
-    background: url("_img/people_flag.png") no-repeat;
-    background-position: center center;
+    background-position: left center;
     background-size: cover;
     height: 100vh;
     width: 50%;
@@ -17,8 +16,8 @@
 }
 .ContentContainer {
   background: #FF3700;
-  height: 100vh;
   overflow: scroll;
+  padding: unit3;
 }
 @media laptop {
   .ContentContainer {
@@ -26,7 +25,7 @@
     width: 50%;
     position: relative;
     float: right;
-    padding: 0 0 0 3vw;
+    padding: unit8;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -39,21 +38,19 @@
   height:18px;
   width: 26px;
   position: relative;
-  top: 4rem;
-  left: 4rem;
 }
 label {
   display: block;
-  margin: 4rem 4rem 0 4rem;
+  margin: 0;
   font-size: 1.5rem;
 }
 @media laptop {
   label {
-    margin: 7rem 4rem 0 4rem;
+    margin: 0;
   }
 }
 .InputZip {
-  margin: 0 2rem 0 4rem;
+  margin: 0 2rem 0 0;
   border: none;
   background: #FF3700;
   border-bottom: 1px solid white;
@@ -82,7 +79,7 @@ label {
   }
 .SiteCredit {
   font-size: 1.3rem;
-  margin: 17% 0 0 4rem;
+  margin: 17% 0 0 0;
 }
 .BorderBottomBlack {
   border-bottom: 1px solid #000;
