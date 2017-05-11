@@ -88,8 +88,8 @@ h6 {
 }
 @media (min-width: 62em) {
   .HeadingLarge {
-    width: 60%;
-    font-size: 6rem;
+    width: 50%;
+    font-size: 4.5vw;
   }
 }
 .HeadingMedium {
