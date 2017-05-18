@@ -78,6 +78,7 @@ function closeOverlay() {
     $('.Overlay').hide();
     $('.OverlayScrim').hide();
     $('.Overlay .OverlayContent').html("");
+    $('.OverlayCity, .OfficialRoster, .ShareContainer, .OverlaySiteCredit').fadeTo(0, 0);
   }, 100);
 }
 

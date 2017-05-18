@@ -1,3 +1,21 @@
+// Typed out headline
+
+// $(function(){
+// 	$(".HeadingLarge").typed({
+// 		strings: ["Do you<br> know who<br> represents<br> you?"],
+// 		typeSpeed: 40,
+//     contentType: "html",
+//     callback: function() {
+//       $('.EnterZip').fadeIn(200);
+//       $('.TinyLogo').delay(200).fadeIn(200);
+//     },
+// 	});
+// });
+
+$('.HeadingLarge').delay(200).fadeTo( 500 , 1);
+$('.EnterZip').delay(500).fadeTo( 500 , 1);
+$('.SiteCredit, .TinyLogo').delay(800).fadeTo( 500 , 1);
+
 // Random Zip Code
 
 function getRandomZip() {
@@ -50,6 +68,10 @@ function getOfficials(zip, roles) {
     $('#OverlayCityName').html(result.address.city);
     // adds in the div we load content into after closeOverlay cleared it
     $(".OverlayContent").html("<div class='OfficialRoster'></div>");
+    $('.OverlayCity').delay(200).fadeTo(500, 1);
+    $('.OfficialRoster').delay(500).fadeTo(500, 1);
+    $('.ShareContainer').delay(750).fadeTo(500, 1);
+    $('.OverlaySiteCredit').delay(1000).fadeTo(500, 1);
     loadOfficialPhotos(officialsSorted.officials);
     for (i = 0; i < officialsSorted.officials.length; i++) {
       console.log("getting an official");

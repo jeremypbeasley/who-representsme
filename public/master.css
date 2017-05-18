@@ -85,11 +85,12 @@ h6 {
   margin: 7rem 0 0 0;
   font-size: 13vw;
   width: 85%;
+  opacity: 0;
 }
 @media (min-width: 62em) {
   .HeadingLarge {
     width: 50%;
-    font-size: 4.5vw;
+    font-size: 4.2vw;
   }
 }
 .HeadingMedium {
@@ -165,6 +166,10 @@ button:hover,
   background-repeat: no-repeat;
   background-size: 11px;
   background-position: 9px 8px;
+}
+.typed-cursor {
+  display: none;
+  opacity: 0;
 }
 .mb0 {
   margin-bottom: 4px;
@@ -671,7 +676,7 @@ label.error {
   left: 0;
   top: 0;
   z-index: 999;
-  transition: all 100ms ease-out;
+  transition: all 400ms ease-out;
   box-shadow: 0px 0px 126px 0px rgba(0,0,0,0.7);
   opacity: 0;
   display: none;
@@ -687,7 +692,6 @@ label.error {
 }
 .OverlayContent {
   margin: 32px 0 0 0;
-  padding-bottom: 56px;
 }
 @media (min-width: 62em) {
   .OverlayContent {
@@ -704,7 +708,7 @@ label.error {
     height: 100vh;
     display: none;
     opacity: 0;
-    transition: all 100ms ease-out;
+    transition: all 400ms ease-out;
   }
   .OverlayScrim.Active {
     opacity: 0.8;
@@ -720,6 +724,7 @@ label.error {
   justify-content: flex-start;
   padding-bottom: 24px;
   border-bottom: 1px solid #000;
+  opacity: 0;
 }
 @media (min-width: 62em) {
   .OfficialRoster {
@@ -824,6 +829,7 @@ label.error {
   position: relative;
   width: 90%;
   margin: 16px 24px 24px 24px;
+  opacity: 0;
 }
 @media (min-width: 62em) {
   .OverlayCity {
@@ -856,6 +862,7 @@ label.error {
 }
 .ShareContainer {
   margin: 0 0 0 24px;
+  opacity: 0;
 }
 @media (min-width: 62em) {
   .ShareContainer {
@@ -903,6 +910,7 @@ input {
   margin: 24px;
   margin-bottom: 30%;
   font-size: 1.3rem;
+  opacity: 0;
 }
 @media (min-width: 62em) {
   .OverlaySiteCredit {
@@ -964,6 +972,7 @@ input {
   height: 18px;
   width: 26px;
   position: relative;
+  opacity: 0;
 }
 label {
   display: block;
@@ -977,6 +986,7 @@ label {
 }
 .EnterZip {
   margin: 64px 0;
+  opacity: 0;
 }
 .InputZip {
   margin: 0 2rem 0 0;
@@ -996,6 +1006,7 @@ label {
   height: 3.5rem;
   width: 6.5rem;
   font-size: 1.5rem;
+  cursor: pointer;
 }
 .LandingPageQuote {
   margin: 10rem 4rem 0 4rem;
@@ -1009,6 +1020,8 @@ label {
 .SiteCredit {
   font-size: 1.3rem;
   margin-top: 32px;
+  margin-bottom: -1em;
+  opacity: 0;
 }
 .BorderBottomBlack {
   border-bottom: 1px solid #000;
