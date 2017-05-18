@@ -26,14 +26,14 @@
   //transform: translateX(0px);
 }
 .OverlayContent {
-  margin: 3rem 0 0 0;
-  padding-bottom: 6rem;
+  margin: unit4 0 0 0;
+  padding-bottom: unit7;
 }
-  @media laptop {
-    .OverlayContent {
-      margin: 5.5rem 0 0 0;
-    }
+@media laptop {
+  .OverlayContent {
+    margin: unit7 0 0 0;
   }
+}
 @media laptop {
   .OverlayScrim {
     position: absolute;
@@ -58,37 +58,65 @@
 .OfficialRoster {
    display: flex;
    flex-direction: column;
-   margin: unit3 unit1 unit6 unit1;
-   justify-content: center;
+   margin: unit3 unit3 unit3 unit3;
+   justify-content: flex-start;
+   padding-bottom: unit3;
+   border-bottom: 1px solid black;
  }
-  @media laptop {
-     .OfficialRoster {
-       flex-direction: row;
-       flex-wrap: wrap;
-       margin-bottom: unit4;
-     }
-   }
+@media laptop {
+  .OfficialRoster {
+    flex-direction: row;
+    padding-bottom: 0;
+    margin: unit3 unit6 0 unit8;
+    flex-wrap: wrap;
+  }
+}
 .OfficialSingle {
   display: flex;
   flex-direction: row;
-  margin: unit5 0;
-  justify-content: center;
+  margin: unit2 0;
+  width: 100%;
+  justify-content: flex-start;
+}
+@media tablet {
+  .OfficialSingle {
+    width: 50%;
+  }
+}
+@media laptop {
+  .OfficialSingle {
+    width: 100%;
+    margin: 0 0 unit6 0;
+  }
+}
+@media desktop {
+  .OfficialSingle {
+    width: 50%;
+  }
+}
+@media desktop {
+  .OfficialInfo {
+    margin-right: unit2;
+  }
 }
 .OfficialPhoto {
-  filter: grayscale(100%);
-  width: 35%;
-  height: 35%;
-  margin: 0 unit4 0 unit2;
+  width: 45%;
+  margin: 0 unit3 0 0;
 }
-  @media laptop {
-    .OfficialPhoto {
-      width: 125px;
-      height: 125px;
-    }
+@media laptop {
+  .OfficialPhoto {
+    margin: 0 unit3 0 0;
   }
-.OfficialInfo {
-  // width: 13rem;
-  margin-right: unit2
+}
+.OfficialPhoto div {
+  filter: grayscale(100%);
+  width: 100%;
+  padding-bottom: 100%;
+  height: 0px;
+  border-radius: 100%;
+  background-size: cover;
+  background-color: black;
+  background-position: top center;
 }
 .OfficialOffice {
   margin: 0;
@@ -98,50 +126,36 @@
   width: 13rem;
 }
 .OfficialDivider {
-  width: 90%;
+  width: calc(100% - unit2);
   border-bottom: 1px solid #ccc;
-  margin: 0 auto;
-  height: 1px;
+  margin: unit3 0;
+  height: 0px;
 }
-  @media laptop {
-    .OfficialDivider {
-      display: none;
-    }
+@media laptop {
+  .OfficialDivider {
+    display: none;
+    margin: unit8;
   }
+}
 
 // CITY AND STATE HEADING
 
-.OverlayCityContainer {
+.OverlayCity{
   position: relative;
-  width: calc(100% - unit6);
-  margin: unit3;
-  height: 3rem;
-  border-bottom: 1px solid #000;
-  font-size: 1.3rem;
+  width: 90%;
+  margin: unit2 unit3 unit3 unit3;
 }
-  @media laptop {
-    .OverlayCityContainer {
-      width: 40%;
-      left: 4rem;
-    }
-}
-.OverlayCityClear {
-  position: relative;
-  top: -2rem;
-  left: 75vw;
-}
-  @media laptop {
-    .OverlayCityClear {
-      top: -1.8rem;
-      left: 22rem;
-    }
+@media laptop {
+  .OverlayCity {
+    margin: unit8;
   }
+}
 .OverlayClose {
   position: absolute;
-  top: 16px;
-  right: 16px;
-  height: 32px;
-  width: 32px;
+  top: unit0;
+  right: unit0;
+  height: unit6;
+  width: unit6;
   background: url(_img/close.svg) no-repeat;
   background-size: 16px;
   background-position: center center;
@@ -149,43 +163,26 @@
   border: none;
   outline: none;
   text-indent: -99999px;
+  z-index: 9999;
+  cursor: pointer;
 }
-  @media laptop {
-    .OverlayClose {
-      position: relative;
-      top: 5rem;
-      left: 46%;
-      opacity: .5;
-    }
-  }
 .MissingSomeone {
-    border-bottom: 1px solid #000;
-    width: 13.4rem;
-    font-size: 1.3rem;
-    margin: unti7 0 0 unit3;
-    position: relative;
-    top: 3rem;
-  }
-.RosterBottomDivider {
-  display: none;
+  border-bottom: 1px solid #000;
+  width: 13.4rem;
+  font-size: 1.3rem;
+  margin: unti7 0 0 unit3;
+  position: relative;
+  top: 3rem;
 }
-  @media laptop {
-    .RosterBottomDivider {
-      display: block;
-      border-bottom: 1px solid #000;
-      width: 85%;
-      margin: 0 auto;
-    }
-  }
 
 // SHARE THIS MODULE
 
 .ShareContainer {
-  margin: 0 0 0 unit4;
+  margin: 0 0 0 unit3;
 }
 @media laptop {
   .ShareContainer {
-    margin: unit7 0 0 unit7;
+    margin: unit8 0 0 unit8;
   }
 }
 .ShareModule {
@@ -227,13 +224,12 @@ input {
   padding: 0 1rem;
 }
 .OverlaySiteCredit {
-  margin: 6rem 0 2rem 3rem;
+  margin: unit8 0 unit8 unit8;
   font-size: 1.3rem;
 }
-  @media laptop {
-    .OverlaySiteCredit {
-      margin-left: 6rem;
-    }
+@media laptop {
+  .OverlaySiteCredit {
+    margin-left: 6rem;
   }
 .OverlayImgGitHub {
   height: 18px;
@@ -248,4 +244,5 @@ input {
   .OverlayImgGitHub {
     margin: 0 0 0 29rem;
   }
+
 }
