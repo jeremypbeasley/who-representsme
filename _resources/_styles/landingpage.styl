@@ -67,13 +67,18 @@ label {
 }
 .SubmitZip {
   background: white;
-  border: none;
   border-radius: 5px;
+  border: 1px solid white;
   color: #ff3700;
-  height: 3.5rem;
-  width: 6.5rem;
+  height: 3.4rem;
+  width: 6.4rem;
   font-size: 1.5rem;
   cursor: pointer;
+  transition: all 200ms ease-out;
+}
+.SubmitZip:hover {
+  background: transparent;
+  color: white;
 }
 .LandingPageQuote {
   margin: 10rem 4rem 0 4rem;
@@ -87,8 +92,13 @@ label {
 .SiteCredit {
   font-size: 1.3rem;
   margin-top: unit4;
-  margin-bottom: -1em;
   opacity: 0;
+  line-height: 250%;
+}
+@media tablet {
+  .SiteCredit {
+    margin-bottom: -1em;
+  }
 }
 .BorderBottomBlack {
   border-bottom: 1px solid #000;

@@ -1,16 +1,4 @@
-// Typed out headline
-
-// $(function(){
-// 	$(".HeadingLarge").typed({
-// 		strings: ["Do you<br> know who<br> represents<br> you?"],
-// 		typeSpeed: 40,
-//     contentType: "html",
-//     callback: function() {
-//       $('.EnterZip').fadeIn(200);
-//       $('.TinyLogo').delay(200).fadeIn(200);
-//     },
-// 	});
-// });
+// UI fade in
 
 $('.HeadingLarge').delay(200).fadeTo( 500 , 1);
 $('.EnterZip').delay(500).fadeTo( 500 , 1);
