@@ -77,10 +77,17 @@
   margin: unit2 0;
   width: 100%;
   justify-content: flex-start;
+  height: 15rem;
+}
+@media phone {
+  .OfficialSingle {
+    height: 27rem;
+  }
 }
 @media tablet {
   .OfficialSingle {
     width: 50%;
+    height: 18rem;
   }
 }
 @media laptop {
@@ -102,13 +109,14 @@
 .OfficialPhoto {
   width: 45%;
   margin: 0 unit3 0 0;
+  position: relative;
 }
 @media laptop {
   .OfficialPhoto {
     margin: 0 unit3 0 0;
   }
 }
-.OfficialPhoto div {
+.OfficialPhoto .Image {
   filter: grayscale(100%);
   width: 100%;
   padding-bottom: 100%;
@@ -117,6 +125,23 @@
   background-size: cover;
   background-color: black;
   background-position: top center;
+  display: none;
+  z-index: 1;
+  position: relative;
+}
+.OfficialPhoto .Backdrop {
+  width: 100%;
+  padding-bottom: 100%;
+  height: 0px;
+  border-radius: 100%;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+}
+#ImgLoader {
+  display: none;
+  opacity: 0;
 }
 .OfficialOffice {
   margin: 0;

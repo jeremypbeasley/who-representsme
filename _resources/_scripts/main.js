@@ -19,9 +19,9 @@ $('#zipForm').submit(function(e) {
     openOverlay();
     e.preventDefault();
     // validate the field has 5 characters AND those are all digits
-    if ( $(".InputZip").val().length !== 5 ) {
-      displaySnackbar("Sorry, we need a 5 digit zip code.", "error");
-    }
+    // if ( $(".InputZip").val().length !== 5 ) {
+    //   displaySnackbar("Sorry, we need a 5 digit zip code.", "error");
+    // }
     // otherwise, go get officials
     getOfficials(
       $(".InputZip").val(),
@@ -50,6 +50,7 @@ function getOfficials(zip, roles) {
     $('#OverlayCityName').html(result.address.city);
     // adds in the div we load content into after closeOverlay cleared it
     $(".OverlayContent").html("<div class='OfficialRoster'></div>");
+    loadOfficialPhotos(officialsSorted.officials);
     for (i = 0; i < officialsSorted.officials.length; i++) {
       console.log("getting an official");
       printOfficial(officialsSorted.officials[i]);
@@ -94,7 +95,8 @@ function printOfficial(official) {
   person = [
     '<div class="OfficialSingle">',
       '<div class="OfficialPhoto">',
-        '<div style="background-image: url(' + official.photos + ')"></div>',
+        '<div class="Image" style="background-image: url(' + official.photos + ')"></div>',
+        '<div class="Backdrop"></div>',
       '</div>',
       '<div class="OfficialInfo">',
         '<p class="op50 OfficialOffice">' + official.office + party + '</p>',
@@ -112,3 +114,27 @@ function printOfficial(official) {
   ].join('\n');
   $(".OfficialRoster").append(person);
 };
+
+function loadOfficialPhotos(officials) {
+  // loops through photourls, making actual images to preload actual bg images
+  for (i = 0; i < officials.length; i++) {
+    let n = new Image();
+    n.setAttribute("src", officials[i].photos);
+    console.log("appending");
+    document.getElementById("ImgLoader").appendChild(n);
+  }
+  var nImages = officials.length;
+  var loadCounter = 0;
+  //binds onload event listner to images
+  $("#ImgLoader img").on("load", function() {
+    loadCounter++;
+    if(nImages == loadCounter) {
+      $('.OfficialPhoto .Image').fadeIn(500);
+      $('.OfficialPhoto .Backdrop').delay(200).fadeOut(500);
+      //$("#loadingDiv").hide();
+    }
+  }).each(function() {
+    // attempt to defeat cases where load event does not fire on cached images
+    if(this.complete) $(this).trigger("load");
+  });
+}

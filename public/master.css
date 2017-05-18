@@ -735,10 +735,17 @@ label.error {
   margin: 16px 0;
   width: 100%;
   justify-content: flex-start;
+  height: 15rem;
+}
+@media (min-width: 30em) {
+  .OfficialSingle {
+    height: 27rem;
+  }
 }
 @media (min-width: 48em) {
   .OfficialSingle {
     width: 50%;
+    height: 18rem;
   }
 }
 @media (min-width: 62em) {
@@ -760,13 +767,14 @@ label.error {
 .OfficialPhoto {
   width: 45%;
   margin: 0 24px 0 0;
+  position: relative;
 }
 @media (min-width: 62em) {
   .OfficialPhoto {
     margin: 0 24px 0 0;
   }
 }
-.OfficialPhoto div {
+.OfficialPhoto .Image {
   filter: grayscale(100%);
   width: 100%;
   padding-bottom: 100%;
@@ -775,6 +783,23 @@ label.error {
   background-size: cover;
   background-color: #000;
   background-position: top center;
+  display: none;
+  z-index: 1;
+  position: relative;
+}
+.OfficialPhoto .Backdrop {
+  width: 100%;
+  padding-bottom: 100%;
+  height: 0px;
+  border-radius: 100%;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+}
+#ImgLoader {
+  display: none;
+  opacity: 0;
 }
 .OfficialOffice {
   margin: 0;
