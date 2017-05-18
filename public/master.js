@@ -304,7 +304,7 @@ function getOfficials(zip, roles) {
         }
       });
     });
-    // adds in the div we load content into after closeOverlay() cleared it
+    // adds in the div we load content into after closeOverlay cleared it
     $(".OverlayContent").html("<div class='OfficialRoster'></div>");
     for (i = 0; i < officialsSorted.officials.length; i++) {
       console.log("getting an official");
