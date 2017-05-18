@@ -9,7 +9,7 @@
   left: 0;
   top: 0;
   z-index: 999;
-  transition: all 100ms ease-out;
+  transition: all 400ms ease-out;
   box-shadow: 0px 0px 126px 0px rgba(0,0,0,0.7);
   opacity: 0;
   //transform: translateX(100px);
@@ -27,7 +27,6 @@
 }
 .OverlayContent {
   margin: unit4 0 0 0;
-  padding-bottom: unit7;
 }
 @media laptop {
   .OverlayContent {
@@ -44,7 +43,7 @@
     height: 100vh;
     display: none;
     opacity: 0;
-    transition: all 100ms ease-out;
+    transition: all 400ms ease-out;
   }
   .OverlayScrim.Active {
     opacity: .8;
@@ -62,6 +61,7 @@
    justify-content: flex-start;
    padding-bottom: unit3;
    border-bottom: 1px solid black;
+   opacity: 0;
  }
 @media laptop {
   .OfficialRoster {
@@ -169,6 +169,7 @@
   position: relative;
   width: 90%;
   margin: unit2 unit3 unit3 unit3;
+  opacity: 0;
 }
 @media laptop {
   .OverlayCity {
@@ -204,6 +205,7 @@
 
 .ShareContainer {
   margin: 0 0 0 unit3;
+  opacity: 0;
 }
 @media laptop {
   .ShareContainer {
@@ -252,6 +254,7 @@ input {
   margin: unit3;
   margin-bottom: 30%;
   font-size: 1.3rem;
+  opacity: 0;
 }
 @media laptop {
   .OverlaySiteCredit {

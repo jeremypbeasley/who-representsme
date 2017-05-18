@@ -219,6 +219,7 @@ function closeOverlay() {
     $('.Overlay').hide();
     $('.OverlayScrim').hide();
     $('.Overlay .OverlayContent').html("");
+    $('.OverlayCity, .OfficialRoster, .ShareContainer, .OverlaySiteCredit').fadeTo(0, 0);
   }, 100);
 }
 
@@ -254,6 +255,12 @@ $(".OverlayScrim").click(function() {
 //     closeOverlay();
 //   }
 // });
+
+// UI fade in
+
+$('.HeadingLarge').delay(200).fadeTo( 500 , 1);
+$('.EnterZip').delay(500).fadeTo( 500 , 1);
+$('.SiteCredit, .TinyLogo').delay(800).fadeTo( 500 , 1);
 
 // Random Zip Code
 
@@ -307,6 +314,10 @@ function getOfficials(zip, roles) {
     $('#OverlayCityName').html(result.address.city);
     // adds in the div we load content into after closeOverlay cleared it
     $(".OverlayContent").html("<div class='OfficialRoster'></div>");
+    $('.OverlayCity').delay(200).fadeTo(500, 1);
+    $('.OfficialRoster').delay(500).fadeTo(500, 1);
+    $('.ShareContainer').delay(750).fadeTo(500, 1);
+    $('.OverlaySiteCredit').delay(1000).fadeTo(500, 1);
     loadOfficialPhotos(officialsSorted.officials);
     for (i = 0; i < officialsSorted.officials.length; i++) {
       console.log("getting an official");
