@@ -67,10 +67,18 @@ app.get('/api/officials/:zip', (req, res) => {
   if (!error && response.statusCode == 200) {
     // body returns a string so make it onto a JSON object
     var dataObj = JSON.parse(body);
-    // making new object that makes sense
+    // making new, cleaner data objects
+    var city = dataObj.normalizedInput.city;
     var offices = dataObj['offices'];
     var officials = dataObj['officials'];
-    var mergedArray = {officials : []};
+    var mergedArray = {
+      address: {
+        city: dataObj.normalizedInput.city,
+        state: dataObj.normalizedInput.state,
+        zip: dataObj.normalizedInput.zip,
+      },
+      officials : []
+    };
     offices.forEach(function(obj, index) {
         var indices = obj['officialIndices'];
         indices.forEach(function(indice, ind) {
@@ -123,7 +131,6 @@ app.get('/api/officials/:zip', (req, res) => {
         })
     })
     if (req.query.name) {
-      console.log("theres a query");
       mergedArray = _.find(mergedArray.officials, { 'name': req.query.name });
     }
     res.send(mergedArray);
