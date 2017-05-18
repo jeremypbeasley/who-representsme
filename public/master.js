@@ -342,6 +342,12 @@ function printOfficial(official) {
   } else {
     var party = "";
   }
+  // site
+  if (official.party == "Republican" || official.party == "Democrat" || official.party == "Green" || official.party == "Independent") {
+    var party = " (" + official.party.charAt(0) + ")";
+  } else {
+    var party = "";
+  }
   person = [
     '<div class="OfficialSingle">',
       '<div class="OfficialPhoto">',
@@ -354,7 +360,9 @@ function printOfficial(official) {
         '<p><a href="tel:',
          official.phones[0].replace(/[^A-Z0-9]/ig, "") + '">' + official.phones,
          '</a></p>',
-        '<p class="OfficialSite">Official site</p>',
+        '<p class="OfficialSite"><a href="',
+          official.urls[0],
+        '" target="_blank">Official site</a></p>',
       '</div>',
     '</div>',
     // '<div class="OfficialDivider class="pt4 pb4></div>',
