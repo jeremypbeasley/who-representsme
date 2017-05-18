@@ -83,8 +83,8 @@ h6 {
   font-family: 'Iowanoldstyle', serif;
   font-size: 3rem;
   margin: 7rem 0 0 0;
-  font-size: 4rem;
-  width: 50%;
+  font-size: 13vw;
+  width: 85%;
 }
 @media (min-width: 62em) {
   .HeadingLarge {
@@ -100,6 +100,7 @@ h6 {
   font-family: 'CircularStdBold', sans-serif;
   font-size: 2rem;
   margin: 0 0 2rem 0;
+  font-size: 1.6rem;
 }
 .Caption {
   font-size: 1.1rem;
@@ -903,8 +904,6 @@ input {
   background-size: cover;
   height: 35vh;
   width: 100%;
-  position: absolute;
-  bottom: -11rem;
 }
 @media (min-width: 62em) {
   .HeroImgContainer {
@@ -951,6 +950,9 @@ label {
     margin: 0;
   }
 }
+.EnterZip {
+  margin: 64px 0;
+}
 .InputZip {
   margin: 0 2rem 0 0;
   border: none;
@@ -981,7 +983,7 @@ label {
 }
 .SiteCredit {
   font-size: 1.3rem;
-  margin: 17% 0 5rem 4rem;
+  margin-top: 32px;
 }
 .BorderBottomBlack {
   border-bottom: 1px solid #000;
