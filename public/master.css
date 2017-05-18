@@ -870,6 +870,7 @@ input {
 }
 .OverlaySiteCredit {
   margin: 24px;
+  margin-bottom: 30%;
   font-size: 1.3rem;
 }
 @media (min-width: 62em) {
