@@ -47,6 +47,7 @@ function getOfficials(zip, roles) {
         }
       });
     });
+    $('#OverlayCityName').html(result.address.city);
     // adds in the div we load content into after closeOverlay cleared it
     $(".OverlayContent").html("<div class='OfficialRoster'></div>");
     for (i = 0; i < officialsSorted.officials.length; i++) {
