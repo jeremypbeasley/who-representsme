@@ -874,12 +874,13 @@ input {
   padding: 0 1rem;
 }
 .OverlaySiteCredit {
-  margin: 64px 0 64px 64px;
+  margin: 24px;
+  margin-bottom: 30%;
   font-size: 1.3rem;
 }
 @media (min-width: 62em) {
   .OverlaySiteCredit {
-    margin-left: 6rem;
+    margin: 64px;
   }
 }
 .OverlayImgGitHub {
