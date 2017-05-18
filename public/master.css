@@ -88,8 +88,8 @@ h6 {
 }
 @media (min-width: 62em) {
   .HeadingLarge {
-    width: 60%;
-    font-size: 6rem;
+    width: 50%;
+    font-size: 4.5vw;
   }
 }
 .HeadingMedium {
@@ -98,7 +98,8 @@ h6 {
 }
 .HeadingSmall {
   font-family: 'CircularStdBold', sans-serif;
-  font-size: 1.6rem;
+  font-size: 2rem;
+  margin: 0 0 2rem 0;
 }
 .Caption {
   font-size: 1.1rem;
@@ -605,7 +606,6 @@ label.error {
 }
 .Snackbar {
   width: 100%;
-  max-width: 400px;
   height: 60px;
   position: fixed;
   background-image: linear-gradient(101deg, #ff6100, #ff000d 47%, #500072);
@@ -615,6 +615,11 @@ label.error {
   z-index: 9999;
   transform: translateY(60px);
   transition: all 200ms ease-out;
+}
+@media (min-width: 62em) {
+  .Snackbar {
+    left: 50%;
+  }
 }
 .Snackbar span {
   padding: 21px 16px;
@@ -771,7 +776,7 @@ label.error {
   background-position: top center;
 }
 .OfficialOffice {
-  margin: 0 0 1rem 0;
+  margin: 0;
 }
 .OfficialName {
   word-wrap: break-word;
@@ -878,12 +883,28 @@ input {
     margin: 64px;
   }
 }
+.OverlayImgGitHub {
+  height: 18px;
+  width: 18px;
+  text-align: center;
+  background-position: center center;
+  position: relative;
+  top: 5px;
+  left: 2rem;
+}
+@media (min-width: 62em) {
+  .OverlayImgGitHub {
+    margin: 0 0 0 29rem;
+  }
+}
 .HeroImgContainer {
   background: url("_img/flag.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 35vh;
   width: 100%;
+  position: absolute;
+  bottom: -11rem;
 }
 @media (min-width: 62em) {
   .HeroImgContainer {
@@ -892,6 +913,7 @@ input {
     height: 100vh;
     width: 50%;
     float: left;
+    top: 0;
   }
 }
 .ContentContainer {
@@ -959,7 +981,7 @@ label {
 }
 .SiteCredit {
   font-size: 1.3rem;
-  margin: 17% 0 0 0;
+  margin: 17% 0 5rem 4rem;
 }
 .BorderBottomBlack {
   border-bottom: 1px solid #000;
@@ -976,6 +998,6 @@ label {
 }
 @media (min-width: 62em) {
   .ImgGitHub {
-    margin: 0 0 0 2rem;
+    margin: 0 0 0 26rem;
   }
 }
