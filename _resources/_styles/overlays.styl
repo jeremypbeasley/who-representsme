@@ -26,7 +26,7 @@
   //transform: translateX(0px);
 }
 .OverlayContent {
-  margin: unit4 0 0 0;
+  margin: unit2 0 0 0;
 }
 @media laptop {
   .OverlayContent {
@@ -77,17 +77,11 @@
   margin: unit2 0;
   width: 100%;
   justify-content: flex-start;
-  height: 15rem;
-}
-@media phone {
-  .OfficialSingle {
-    height: 27rem;
-  }
+  //border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 @media tablet {
   .OfficialSingle {
     width: 50%;
-    height: 18rem;
   }
 }
 @media laptop {
@@ -96,10 +90,15 @@
     margin: 0 0 unit6 0;
   }
 }
-@media desktop {
-  .OfficialSingle {
-    width: 50%;
-  }
+// @media desktop {
+//   .OfficialSingle {
+//     width: 50%;
+//   }
+// }
+.OfficialInfo {
+  border-top: 1px solid rgba(0,0,0,1);
+  padding-top: unit2;
+  width: 100%;
 }
 @media desktop {
   .OfficialInfo {
@@ -107,12 +106,13 @@
   }
 }
 .OfficialPhoto {
-  width: 45%;
+  width: 85%;
   margin: 0 unit3 0 0;
   position: relative;
 }
 @media laptop {
   .OfficialPhoto {
+    width: 65%;
     margin: 0 unit3 0 0;
   }
 }
@@ -127,7 +127,8 @@
   background-position: top center;
   display: none;
   z-index: 1;
-  position: relative;
+  position: absolute;
+  top: 0;
 }
 .OfficialPhoto .Backdrop {
   width: 100%;
@@ -135,8 +136,7 @@
   height: 0px;
   border-radius: 100%;
   background-color: black;
-  position: absolute;
-  top: 0;
+  position: relative;
   z-index: 0;
 }
 #ImgLoader {
@@ -148,7 +148,16 @@
 }
 .OfficialName {
   word-wrap: break-word;
-  width: 13rem;
+  // font-family: 'CircularStdBold', sans-serif;
+	// font-size: 2rem;
+
+	font-size: 1.3rem;
+}
+@media laptop {
+  .OfficialName {
+    font-size: 2.6rem;
+    font-family: 'Iowanoldstyle', serif;
+  }
 }
 .OfficialDivider {
   width: calc(100% - unit2);
