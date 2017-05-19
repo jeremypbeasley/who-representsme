@@ -80,7 +80,7 @@ function printOfficial(official) {
     for (x = 0; x < official.channels.length; x++) {
       if (official.channels[x].type == "Twitter") {
         // console.log("has twitter");
-        officialTwitter = '<p class="mt1"><a href="http://twitter.com/' + official.channels[x].id + '" target="_blank">@' + official.channels[x].id + '</a></p>';
+        officialTwitter = '<p class=""><a href="http://twitter.com/' + official.channels[x].id + '" target="_blank">@' + official.channels[x].id + '</a></p>';
       }
     }
   }
@@ -110,14 +110,14 @@ function printOfficial(official) {
       '</div>',
       '<div class="OfficialInfo">',
         '<p class="op50 OfficialOffice">' + official.office + party + '</p>',
-        '<h3 class="OfficialName HeadingSmall">' + official.name + '</h3>',
-        officialTwitter,
+        '<h3 class="OfficialName d-mt2 mb3">' + official.name + '</h3>',
         '<p><a href="tel:',
          official.phones[0].replace(/[^A-Z0-9]/ig, "") + '">' + official.phones,
          '</a></p>',
+         officialTwitter,
         '<p class="OfficialSite"><a href="',
           official.urls[0],
-        '" target="_blank">Official site</a></p>',
+        '" target="_blank">More info ›</a></p>',
       '</div>',
     '</div>',
     // '<div class="OfficialDivider class="pt4 pb4></div>',
@@ -140,7 +140,7 @@ function loadOfficialPhotos(officials) {
     loadCounter++;
     if(nImages == loadCounter) {
       $('.OfficialPhoto .Image').fadeIn(500);
-      $('.OfficialPhoto .Backdrop').delay(200).fadeOut(500);
+      $('.OfficialPhoto .Backdrop').delay(200).fadeTo(.1);
       //$("#loadingDiv").hide();
     }
   }).each(function() {

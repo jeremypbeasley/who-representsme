@@ -691,7 +691,7 @@ label.error {
   opacity: 1;
 }
 .OverlayContent {
-  margin: 32px 0 0 0;
+  margin: 16px 0 0 0;
 }
 @media (min-width: 62em) {
   .OverlayContent {
@@ -740,17 +740,10 @@ label.error {
   margin: 16px 0;
   width: 100%;
   justify-content: flex-start;
-  height: 15rem;
-}
-@media (min-width: 30em) {
-  .OfficialSingle {
-    height: 27rem;
-  }
 }
 @media (min-width: 48em) {
   .OfficialSingle {
     width: 50%;
-    height: 18rem;
   }
 }
 @media (min-width: 62em) {
@@ -759,10 +752,10 @@ label.error {
     margin: 0 0 48px 0;
   }
 }
-@media (min-width: 75em) {
-  .OfficialSingle {
-    width: 50%;
-  }
+.OfficialInfo {
+  border-top: 1px solid #000;
+  padding-top: 16px;
+  width: 100%;
 }
 @media (min-width: 75em) {
   .OfficialInfo {
@@ -770,12 +763,13 @@ label.error {
   }
 }
 .OfficialPhoto {
-  width: 45%;
+  width: 85%;
   margin: 0 24px 0 0;
   position: relative;
 }
 @media (min-width: 62em) {
   .OfficialPhoto {
+    width: 65%;
     margin: 0 24px 0 0;
   }
 }
@@ -790,7 +784,8 @@ label.error {
   background-position: top center;
   display: none;
   z-index: 1;
-  position: relative;
+  position: absolute;
+  top: 0;
 }
 .OfficialPhoto .Backdrop {
   width: 100%;
@@ -798,8 +793,7 @@ label.error {
   height: 0px;
   border-radius: 100%;
   background-color: #000;
-  position: absolute;
-  top: 0;
+  position: relative;
   z-index: 0;
 }
 #ImgLoader {
@@ -811,7 +805,13 @@ label.error {
 }
 .OfficialName {
   word-wrap: break-word;
-  width: 13rem;
+  font-size: 1.3rem;
+}
+@media (min-width: 62em) {
+  .OfficialName {
+    font-size: 2.6rem;
+    font-family: 'Iowanoldstyle', serif;
+  }
 }
 .OfficialDivider {
   width: calc(100% - unit2);
