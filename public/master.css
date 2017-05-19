@@ -638,7 +638,7 @@ label.error {
   box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.2);
 }
 .Snackbar.TypeNotif {
-  background-image: linear-gradient(101deg, #ff6100, #ff000d 47%, #500072);
+  background-image: none;
   background-color: #000;
 }
 .Snackbar.TypeConf {
@@ -861,24 +861,25 @@ label.error {
   top: 3rem;
 }
 .ShareContainer {
-  margin: 0 0 0 24px;
+  margin: 0 24px;
   opacity: 0;
 }
 @media (min-width: 62em) {
   .ShareContainer {
-    margin: 64px 0 0 64px;
+    margin: 64px;
   }
 }
 .ShareModule {
   border: 1px solid #ff3700;
   border-radius: 5px;
-  width: 89%;
-  max-width: 34rem;
+  width: 100%;
   margin: 2rem 0 0 0;
+  overflow: auto;
 }
 @media (min-width: 62em) {
   .ShareModule {
     margin: 2rem 0 0 0;
+    max-width: 34rem;
   }
 }
 input {
@@ -892,19 +893,26 @@ input {
   height: 2.9rem;
   width: 69%;
   margin: 0 0 0 0.5rem;
-  border-right: 1px solid #ff3700;
   background: transparent;
   font-size: 1.4rem;
   color: #888;
   webkit-appearance: none;
+  float: left;
 }
 .BtnShare {
   border: none;
   border-radius: 0;
   background: transparent;
+  border-left: 1px solid #ff3700;
   font-size: 1.4rem;
   color: #ff3700;
   padding: 0 1rem;
+  height: 3rem;
+  float: right;
+}
+.BtnShare:hover {
+  background: #ff3700;
+  color: #fff;
 }
 .OverlaySiteCredit {
   margin: 24px;
