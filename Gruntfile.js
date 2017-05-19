@@ -17,6 +17,7 @@ module.exports = function(grunt) {
         src: [
           'node_modules/jquery/dist/jquery.min.js',
           'node_modules/lodash/lodash.min.js',
+          'node_modules/clipboard/dist/clipboard.min.js',
           '_resources/_scripts/ui.js',
           '_resources/_scripts/main.js'
         ],

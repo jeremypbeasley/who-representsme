@@ -918,11 +918,13 @@ input {
   margin: 24px;
   margin-bottom: 30%;
   font-size: 1.3rem;
+  line-height: 250%;
   opacity: 0;
 }
 @media (min-width: 62em) {
   .OverlaySiteCredit {
     margin: 64px;
+    line-height: 140%;
   }
 }
 .OverlayImgGitHub {
