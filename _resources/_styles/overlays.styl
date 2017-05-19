@@ -213,24 +213,25 @@
 // SHARE THIS MODULE
 
 .ShareContainer {
-  margin: 0 0 0 unit3;
+  margin: 0 unit3;
   opacity: 0;
 }
 @media laptop {
   .ShareContainer {
-    margin: unit8 0 0 unit8;
+    margin: unit8;
   }
 }
 .ShareModule {
   border: 1px solid #FF3700;
   border-radius: 5px;
-  width: 89%;
-  max-width: 34rem;
+  width: 100%;
   margin: 2rem 0 0 0;
+  overflow: auto;
 }
 @media laptop {
   .ShareModule {
     margin: 2rem 0 0 0;
+    max-width: 34rem;
   }
 }
 // overrides mobile safari input styling
@@ -245,19 +246,26 @@ input {
   height: 2.9rem;
   width: 69%;
   margin: 0 0 0 .5rem;
-  border-right: 1px solid #FF3700;
   background: transparent;
   font-size: 1.4rem;
   color: #888;
   webkit-appearance: none;
+  float: left;
 }
 .BtnShare {
   border: none;
   border-radius: 0;
   background: transparent;
+  border-left: 1px solid #FF3700;
   font-size: 1.4rem;
   color: #FF3700;
   padding: 0 1rem;
+  height: 3rem;
+  float: right;
+}
+.BtnShare:hover {
+  background: #FF3700;
+  color: white;
 }
 .OverlaySiteCredit {
   margin: unit3;

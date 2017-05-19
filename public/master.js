@@ -406,3 +406,8 @@ function loadOfficialPhotos(officials) {
     if(this.complete) $(this).trigger("load");
   });
 }
+
+// copy share url
+$('.BtnShare').click(function() {
+  displaySnackbar("Copied to your clipboard!", "notif");
+});
