@@ -33,9 +33,9 @@ $('#zipForm').submit(function(e) {
       $(".InputZip").val(),
       [
         "legislatorUpperBody", // Senate
-        "legislatorLowerBody", // House
-        "headOfGovernment", // Governor
-        "headOfGovernmentCity" // Mayor
+        "legislatorLowerBody" // House
+        //"headOfGovernment", // Governor
+        //"headOfGovernmentCity" // Mayor
       ]
     );
 });
