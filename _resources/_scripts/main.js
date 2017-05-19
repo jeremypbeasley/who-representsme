@@ -22,7 +22,6 @@ getRandomZip();
 //  OFFICIALS, Form
 
 $('#zipForm').submit(function(e) {
-    openOverlay();
     e.preventDefault();
     // validate the field has 5 characters AND those are all digits
     // if ( $(".InputZip").val().length !== 5 ) {
@@ -44,30 +43,38 @@ $('#zipForm').submit(function(e) {
 
 function getOfficials(zip, roles) {
   $.get("/api/officials/" + zip, function(result) {
-    var officialsSorted = {officials : []};
-    _.forEach(roles, function(value, key) {
-      var role = value;
-      _.forEach(result.officials, function(value, key) {
-        if (value.roles == role) {
-          officialsSorted['officials'].push(value);
-        }
+    if (zip !== result.address.zip) {
+      displaySnackbar("Please enter a valid US zip code.", "notif");
+    } else {
+      openOverlay();
+      var officialsSorted = {officials : []};
+      _.forEach(roles, function(value, key) {
+        var role = value;
+        _.forEach(result.officials, function(value, key) {
+          if (value.roles == role) {
+            officialsSorted['officials'].push(value);
+          }
+        });
       });
-    });
-    $('#OverlayCityName').html(result.address.city);
-    // adds in the div we load content into after closeOverlay cleared it
-    $(".OverlayContent").html("<div class='OfficialRoster'></div>");
-    $('.OverlayCity').delay(200).fadeTo(500, 1);
-    $('.OfficialRoster').delay(500).fadeTo(500, 1);
-    $('.ShareContainer').delay(750).fadeTo(500, 1);
-    $('.OverlaySiteCredit').delay(1000).fadeTo(500, 1);
-    loadOfficialPhotos(officialsSorted.officials);
-    for (i = 0; i < officialsSorted.officials.length; i++) {
-      console.log("getting an official");
-      printOfficial(officialsSorted.officials[i]);
+      $('#OverlayCityName').html(result.address.city);
+      // adds in the div we load content into after closeOverlay cleared it
+      $(".OverlayContent").html("<div class='OfficialRoster'></div>");
+      $('.OverlayCity').delay(200).fadeTo(500, 1);
+      $('.OfficialRoster').delay(500).fadeTo(500, 1);
+      $('.ShareContainer').delay(750).fadeTo(500, 1);
+      $('.OverlaySiteCredit').delay(1000).fadeTo(500, 1);
+      loadOfficialPhotos(officialsSorted.officials);
+      for (i = 0; i < officialsSorted.officials.length; i++) {
+        console.log("getting an official");
+        printOfficial(officialsSorted.officials[i]);
+      }
+      var w = $(".officialSingle").outerWidth(true);
+      $("#officialList").css("width", (officialsSorted.officials.length * w) + "px");
     }
-    var w = $(".officialSingle").outerWidth(true);
-    $("#officialList").css("width", (officialsSorted.officials.length * w) + "px");
-  });
+  }).fail(function() {
+    console.log("didnt work");
+    displaySnackbar("Sorry! We're having some issues. Try again?", "notif");
+  })
 };
 
 function printOfficial(official) {
