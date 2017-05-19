@@ -150,6 +150,12 @@ function loadOfficialPhotos(officials) {
 }
 
 // copy share url
-$('.BtnShare').click(function() {
+
+var clipboard = new Clipboard('.BtnShare');
+
+clipboard.on('success', function(e) {
   displaySnackbar("Copied to your clipboard!", "notif");
+});
+clipboard.on('error', function(e) {
+   displaySnackbar("We weren't able to copy this :(", "error");
 });
