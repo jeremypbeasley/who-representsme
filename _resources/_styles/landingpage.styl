@@ -1,9 +1,19 @@
+.LandingPageContainer {
+  display: flex;
+  flex-direction: column;
+}
+@media laptop {
+  .LandingPageContainer {
+    flex-direction: row;
+  }
+}
 .HeroImgContainer {
   background: url(_img/flag.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 35vh;
   width: 100%;
+  order: 2;
 }
 @media laptop {
   .HeroImgContainer {
@@ -11,25 +21,27 @@
     background-size: cover;
     height: 100vh;
     width: 50%;
-    float: left;
     top: 0;
+    flex-direction: row;
+    order: 1;
   }
 }
 .ContentContainer {
   background: #FF3700;
   overflow: scroll;
   padding: unit3;
+  order: 1;
 }
 @media laptop {
   .ContentContainer {
     height:100vh;
     width: 50%;
     position: relative;
-    float: right;
     padding: unit8;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
+    order: 2;
+    flex-direction: column;
   }
 }
 .TinyLogo{
