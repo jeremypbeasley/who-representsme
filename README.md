@@ -20,7 +20,7 @@ Our app is built on `Node` (`6.9.1`). We use `npm` (`4.1.1`) to manage all depen
 6. Run the app with `npm run start`
 7. Open the app `http://localhost:7000`
 
-## Local environment
+### Local environment
 
 Everyone has their secrets. Our's is a key we use to call the [Google Civic Information API](https://developers.google.com/civic-information/). This key is stored in a file that you must create in the root of the repo, titled `.env`.
 
