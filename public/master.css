@@ -941,12 +941,22 @@ input {
     margin: 0 0 0 29rem;
   }
 }
+.LandingPageContainer {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 62em) {
+  .LandingPageContainer {
+    flex-direction: row;
+  }
+}
 .HeroImgContainer {
   background: url("_img/flag.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 35vh;
   width: 100%;
+  order: 2;
 }
 @media (min-width: 62em) {
   .HeroImgContainer {
@@ -954,25 +964,27 @@ input {
     background-size: cover;
     height: 100vh;
     width: 50%;
-    float: left;
     top: 0;
+    flex-direction: row;
+    order: 1;
   }
 }
 .ContentContainer {
   background: #ff3700;
   overflow: scroll;
   padding: 24px;
+  order: 1;
 }
 @media (min-width: 62em) {
   .ContentContainer {
     height: 100vh;
     width: 50%;
     position: relative;
-    float: right;
     padding: 64px;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
+    order: 2;
+    flex-direction: column;
   }
 }
 .TinyLogo {
