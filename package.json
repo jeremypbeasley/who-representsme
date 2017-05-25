@@ -1,16 +1,25 @@
 {
-  "name": "auth0-nodejs-regular-webapp-sample",
+  "name": "Am I Represented?",
   "version": "1.0.0",
-  "description": "Auth0 + NodeJS Regular WebApp seed",
-  "repository": "git://github.com/auth0/node-auth0",
-  "author": "Auth0",
+  "description": "A web app to help you find your elected representatives.",
+  "repository": "https://github.com/jeremypbeasley/amirepresented.git",
+  "author": "@jennminerva and @jeremypbeasley",
+  "contributors": [
+    {
+      "name": "Jenn Minerva",
+      "email": "jenn@jennminerva.com"
+    },
+    {
+      "name": "Jeremy P. Beasley",
+      "email": "jeremy@jeremypbeasley.com"
+    }
+  ],
   "license": "MIT",
   "engines": {
     "npm": "4.1.1",
     "node": "6.9.1"
   },
   "scripts": {
-    "dev": "nodemon app.js",
     "start": "nodemon app.js"
   },
   "dependencies": {
@@ -33,11 +42,9 @@
     "grunt-contrib-stylus": "^0.20.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-remove": "^0.1.0",
-    "jade": "~1.11.0",
     "jquery": "latest",
     "lodash": "^4.17.4",
     "method-override": "^2.2.0",
-    "mongo-querystring": "^4.1.0",
     "nodemon": "^1.9.2",
     "orchestrate": "^0.3.11",
     "q": "^1.0.1",
