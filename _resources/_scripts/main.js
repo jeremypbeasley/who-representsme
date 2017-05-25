@@ -7,7 +7,7 @@ $('.SiteCredit, .TinyLogo').delay(800).fadeTo( 500 , 1);
 // Autofill a random zip while in development / testing
 
 function getRandomZip() {
-  $.get("/zips.json", function(result) {
+  $.get("/mock_zips.json", function(result) {
     if (!result) {
       //err
     } else {
