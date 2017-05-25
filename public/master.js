@@ -269,7 +269,7 @@ $('.HeadingLarge').delay(200).fadeTo( 500 , 1);
 $('.EnterZip').delay(500).fadeTo( 500 , 1);
 $('.SiteCredit, .TinyLogo').delay(800).fadeTo( 500 , 1);
 
-// Random Zip Code
+// Autofill a random zip while in development / testing
 
 function getRandomZip() {
   $.get("/zips.json", function(result) {
@@ -282,7 +282,7 @@ function getRandomZip() {
     }
   })
 }
-getRandomZip();
+// getRandomZip();
 
 //  OFFICIALS, Form
 
