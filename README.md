@@ -22,7 +22,7 @@ Our app is built on `Node` (`6.9.1`). We use `npm` (`4.1.1`) to manage all depen
 
 ## Local environment
 
-Everyone has their secrets. Our's is a key we use to call the [[Google Civic Information API](https://developers.google.com/civic-information/). This key is stored in a file that you must create in the root of the repo, titled `.env`.
+Everyone has their secrets. Our's is a key we use to call the [Google Civic Information API](https://developers.google.com/civic-information/). This key is stored in a file that you must create in the root of the repo, titled `.env`.
 
 It should look like so: `GOOGLE_API_KEY=KEYGOESHERE`. We can't share ours but it's quite easy to set up yourself [here](https://developers.google.com/civic-information/docs/using_api). Once this is set up, `dotenv` will know to look for it there and use it as a variable in `app.js`.
 
