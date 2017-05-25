@@ -16,7 +16,7 @@ Our app is built on `Node` (`6.9.1`). We use `npm` (`4.1.1`) to manage all depen
 
 ### Data
 
-We get all our representatives info from [Google’s Civic Information AP](Ihttps://developers.google.com/civic-information/). Data is easily the weakest part of our app. Images come back in varying shapes and sizes and contact information of each representative can be hit or miss. We're pursuing ways to fix this with a more distributed data model.
+We get all our representatives info from [Google’s Civic Information API](https://developers.google.com/civic-information/). Data is easily the weakest part of our app. Images come back in varying shapes and sizes and contact information of each representative can be hit or miss. We're pursuing ways to fix this with a more distributed data model.
 
 ### Deployment
 
