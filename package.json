@@ -1,7 +1,7 @@
 {
   "name": "amirepresented",
   "version": "1.0.0",
-  "description": "A web app to help you quickly see your elected representatives.",
+  "description": "A web app to help you find your elected representatives.",
   "repository": "https://github.com/jeremypbeasley/amirepresented.git",
   "author": "@jennminerva and @jeremypbeasley",
   "contributors": [
